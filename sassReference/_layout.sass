@@ -1,0 +1,270 @@
+// ------------------------------------------------------------------
+// Loader
+// ------------------------------------------------------------------
+body
+	background: $cinza
+
+#loader
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: $brancoCinza
+	z-index: 99
+	+transition
+
+	& > img
+		position: fixed
+		top: 50%
+		left: 50%
+		width: 360px
+		height: 245px
+		margin-top: -180px
+		margin-left: -180px
+		z-index: 100
+		+transition
+		+animate(zoomIn)
+		
+
+
+.pace-done
+	#loader
+		+animate(fadeOut)
+		pointer-events: none
+
+	#header
+		+animate(bounceInDown)
+
+#header
+	display: block
+	width: 100%
+	height: 80px
+	background: rgba($brancoCinza, 1) url(img/commet-inline2.png) center left no-repeat
+	+box-sizing(border-box)
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	z-index: 1
+	padding-left: 550px
+	padding-right: 15px
+	text-align: right
+
+	#gridScreen
+		height: 80px
+		width: 240px
+		display: inline-block
+		a
+			+fontIcon
+			font-size: 50px
+			line-height: 80px
+			display: block
+			width: 80px
+			float: left
+			text-align: center
+
+			&.active
+				background: $cinza
+
+#contentWrapper
+	position: fixed
+	top: 150px
+	bottom: 10px
+	left: 10px
+	right: 10px
+	display: block
+	height: auto
+	overflow: visible
+
+	& > .map
+		display: block
+		float: left
+		width: 100%
+		height: 100%
+		max-height: 100%
+		+transition
+		+transition-duration(0.5s)
+		text-align: center
+		+box-sizing(border-box)
+		border: 10px solid $cinza
+		position: relative
+		background: $brancoCinza
+		border: 2px solid $cinzaEscuro
+		overflow: visible
+		
+		.imgWrapper
+			overflow: hidden
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+
+			img
+				display: block
+				height: 91%
+				max-height: 91%
+				width: auto
+				+box-sizing(border-box)
+				position: absolute
+				left: 50%
+				top: 48%
+				+translate(-50%, -50%)
+
+		.previsaoList
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba($branco, 0.9)
+			z-index: 99
+			display: block
+			+transition
+
+			span
+				padding: 5px
+				display: inline-block
+				font-size: 12px
+				font-weight: bold
+				text-align: center
+				border: 1px solid rgba($preto, 0.2)
+				+border-radius(3px)
+				margin: 2px
+				cursor: pointer
+
+				&.active
+					background: $corPrincipal
+					color: $branco
+
+		.formWrapper
+			position: absolute	
+			top: -60px	
+			left: -2px
+			right: -2px
+			display: block
+			z-index: 2
+			+transition
+			+transition-duration(1s)
+
+			& > a
+				background: $corPrincipal
+				border: 2px solid $cinzaEscuro
+				display: block
+				+fontTitle
+				font-size: 18px
+				font-weight: 300
+				color: $brancoCinza
+				padding: 20px
+				line-height: 20px
+				text-align: center
+				text-transform: uppercase
+
+			form
+				display: block
+				background: rgba($branco, 0.90)
+				overflow: hidden
+				+transition
+				max-height: 1px
+				+border-radius(0 0 10px 10px)
+				padding-top: 10px
+				
+				section
+					display: block
+					padding: 10px
+					//border-top: 1px solid rgba(0,0,0,0.5)
+					text-align: left
+					span
+						display: block
+						+fontTitle
+						font-size: 20px
+						text-transform: uppercase
+						font-weight: 300
+						color: $black
+						padding-bottom: 5px
+						opacity: 0.6
+					select
+						display: block
+						width: 100%
+						background: rgba($black, 0.1) url(img/arrowDown.png) center right no-repeat
+						padding-right: 50px
+						+appearance(none)
+						padding: 10px
+						font-size: 14px
+						+fontTitle
+						padding-right: 40px
+						position: relative
+						color: $black
+						border: 0
+
+						option
+							font-size: 18px
+
+						&:focus
+							outline: none
+				
+				.submit
+					margin-top: 10px
+					+appearance(none)
+					background: $cinzaEscuro
+					color: $brancoCinza
+					display: block
+					width: 100%
+					padding: 10px 10px 20px 10px
+					+fontTitle
+					font-size: 20px
+					+box-sizing(border-box)
+					+border-radius(0 0 10px 10px)
+					border: 0
+					+box-shadow(rgba($black, 0.2) 0 -10px 0 0 inset)
+					text-transform: uppercase
+					
+
+		&.active
+			.formWrapper
+				form
+					max-height: 500px
+
+					
+
+		&.map2, &.map3
+			.formWrapper
+				+transition-duration(1s)
+				opacity: 0
+	
+	&.column1
+		& > .map
+			opacity: 0
+			visibility: hidden
+
+			&.map1
+				visibility: visible
+				opacity: 1
+				width: 100%
+
+	&.column2
+		& > .map
+			width: 50%
+			opacity: 1
+
+			&.map2
+				.formWrapper
+					+transition-delay(0.5s)
+					opacity: 1
+
+			&.map3
+				opacity: 0
+				visibility: hidden
+
+	&.column3
+		& > .map
+			width: 33.333333333%
+
+			&.map2, &.map3
+				.formWrapper
+					+transition-delay(0.5s)
+					opacity: 1
+
+		
+
+

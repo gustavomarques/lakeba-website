@@ -1,0 +1,760 @@
+// ------------------------------------------------------------------
+// General
+// ------------------------------------------------------------------
+
+body
+	background-color: $whiteGray
+	background-image: url(img/lakeba-logo-bg.jpg)
+	background-position: 590px 460px
+	background-repeat: no-repeat
+	overflow-x: hidden
+	
+	& > header
+		min-height: 500px
+		display: block
+		position: relative
+		background-position: center center
+		background-repeat: no-repeat
+		+bgCover
+
+	& > #footer
+		background: $grayDarkBlue
+		border-top: 20px solid $grayDark
+		padding-top: 50px
+		display: block
+		width: 100%
+
+		#sitemapWrapper
+
+			#contactFooter
+				+col(3,0,0,0)
+				
+				& > div
+					background: #1A2737
+					padding: 20px 40px
+					margin-top: 40px
+
+					span
+						color: $gray
+						font-size: 16px
+						line-height: 1.5
+						margin: 20px 0
+						+clearfix
+						display: block
+
+						b
+							display: block
+							color: $whitePure
+							font-weight: 600
+							margin-bottom: 5px
+
+			#sitemap
+				+col(9,0,0,0)
+				padding-top: 64px
+
+				a
+					color: $whitePure
+					opacity: 0.6
+					font-size: 14px
+					line-height: 20px
+					padding: 23px 0
+					display: block
+					position: relative
+
+					&:hover
+						opacity: 1
+
+				& > nav
+					+col(3,0,0,0)
+					padding-left: 50px
+					+clearfix
+
+					& > a
+						&:after
+							content: ''
+							position: absolute
+							left: 0px
+							bottom: 0
+							height: 2px
+							background-color: $whitePure
+							width: 20px
+
+						&:hover
+							&:after
+								width: 100px
+
+
+				nav.ventures
+					+col(6,0,0,0)
+					padding-left: 50px
+					nav
+						+clearfix
+						margin-top: 5px
+						a
+							font-size: 14px
+							+box-sizing(border-box)
+							width: 50%
+							float: left
+							padding: 14px 0
+							padding-left: 20px
+
+		h4
+			display: block
+			text-transform: uppercase
+			font-weight: 300
+			line-height: 20px
+			font-size: 30px
+			color: $gray
+			text-align: center
+			margin-top: 80px
+			margin-bottom: 0
+
+		#partnersFooter
+			padding: 40px
+			text-align: center
+			display: block
+			a
+				display: inline-block
+				padding: 20px
+				opacity: 0.3
+
+				img
+					display: block
+					height: 50px
+
+				&:hover
+					+scale(1.2)
+					opacity: 1
+
+
+		footer
+			background: $grayDark
+			padding: 20px 0
+			display: block
+			width: 100%
+			text-align: center
+
+			a
+				font-size: 14px
+				font-weight: 400
+				display: block
+				margin: 0 auto
+				line-height: 30px
+				color: rgba($whitePure, 0.4)
+				padding: 10px 0
+
+				&:hover
+					+scale(2)
+					color: $whitePure
+
+				img
+					display: inline-block
+					width: 24px
+					+translateY(5px)
+					margin: 0 5px
+
+
+
+
+
+
+
+
+
+
+#contactHeader
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	background: rgba(0,0,0,0.4)
+	height: 30px
+	z-index: 2
+
+
+	#tagline
+		+col(4, 0, 0)
+		text-align: left
+
+	#contactInfo
+		+col(8, 0, 0)
+		text-align: right
+
+		span
+			margin-left: 60px
+
+	span
+		display: inline-block
+		font-size: 10px
+		font-weight: 600
+		color: $whitePure
+		opacity: 0.5
+		line-height: 30px
+
+		&:hover
+			opacity: 1
+			+scale(1.2)
+
+
+#nav
+	position: fixed
+	top: 70px
+	left: 0
+	right: 0
+	z-index: 2
+
+	a
+		line-height: 60px
+		display: inline-block
+
+	#lakebaLogo
+		+col(2, 0, 0)
+		img
+			width: 140px
+			display: block
+
+		&:hover
+			img
+				+scale(1.2)
+
+
+	#navDesktop
+		+col(10,0,0)
+		text-align: right
+
+		a
+			display: inline-block
+			position: relative
+			line-height: 60px
+			color: $whitePure
+			padding: 20px 30px
+			line-height: 20px
+			font-size: 16px
+			font-weight: 600
+
+
+
+section
+	padding-top: 60px
+	padding-bottom: 60px
+
+
+
+
+
+// ------------------------------------------------------------------
+// Home page
+// ------------------------------------------------------------------
+
+#homepage
+	header
+		height: 620px
+		background-image: url(img/header-home.jpg)
+		padding-top: 245px
+
+		h1, h2
+			color: $whitePure
+			line-height: 60px
+			+col(8,0,0,0)
+
+		h1
+			margin-bottom: 30px
+
+		h2
+			font-weight: 200
+			font-size: 50px
+
+	#headerComplement
+		.row
+			position: relative
+			justify-content: flex-end
+			padding-top: 0
+
+			#blueBox
+				position: absolute
+				left: 0
+				top: -50px
+				width: 25%
+				background: $grayDarkBlue
+				+col(4,0,0,0)
+				padding: 45px 30px
+				display: block
+				z-index: 1
+
+				a
+					+box-sizing(border-box)
+					font-size: 30px
+					padding: 15px
+					text-align: left
+					display: block
+					color: $whitePure
+					opacity: 0.6
+					font-weight: 600
+
+					&:hover
+						opacity: 1
+						+scale(1.2)
+
+			#venturesLinks
+				+animate(bounceInRight)
+				+col(9,0,0,0)
+				padding: 40px 0 0 40px
+
+				h3
+					font-weight: 600
+					padding-bottom: 30px
+					margin-bottom: 20px
+					position: relative
+
+					&:after
+						position: absolute
+						left: 0
+						bottom: 0
+						height: 2px
+						width: 40px
+						display: block
+						background: $grayDarkBlue
+						content: " "
+
+				nav
+					a
+						+col(3,0,0,0)
+						font-weight: 400
+						color: $grayDarkBlue
+						padding: 20px 40px 
+						opacity: 0.6
+
+						&:hover
+							+scale(1.2)
+							background: $whiteBlue
+							opacity: 1
+
+
+
+	#solutionsByIndustry
+		&.active
+			+animate(bounceIn)
+
+		+animate(bounceOut)
+		align-items: center
+		justify-content: center
+
+		h3
+			color: $grayLight
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 70px
+			line-height: 69px
+			+col(6,0,4,0)
+			padding: 80px 0
+
+		.industryBox
+			+col(3,30,2,0)
+			height: 300px
+			background: $whitePure
+			position: relative
+
+			img
+				display: block
+				width: 40%
+				position: absolute
+				top: 50%
+				left: 50%
+				margin-top: -20%
+				margin-left: -20%
+				opacity: 0.3
+				+filter(saturate,0%)
+
+			span
+				position: absolute
+				top: 200px
+				right: 50px
+				left: 50px
+				bottom: 30px
+				font-size: 24px
+				line-height: 30px
+				vertical-align: middle
+				text-align: center
+				font-weight: 600
+				color: $grayDark
+				opacity: 0
+
+			&:hover
+				+scale(1.1)
+				z-index: 1
+				+box-shadow(0, 15px, 100px, rgba($grayDarkBlue, 0.2))
+
+				img
+					+scale(0.7)
+					top: 40%
+					opacity: 1
+					+filter(saturate,100%)
+
+				span
+					opacity: 1
+
+	#corporateResponsibility
+		height: 620px
+		position: relative
+		margin: 60px 0
+		padding: 0 20px
+		+clearfix
+
+		.wrapper
+			position: relative
+			+clearfix
+			height: 620px
+
+		h3
+			position: absolute
+			top: 80px
+			left: 10%
+			right: 62%
+			color: $grayLight
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 40px
+			line-height: 40px
+			display: block
+			text-align: right
+			z-index: 1
+
+		.responsibilityType
+			// 1% = 14.4px
+			position: absolute
+			height: 400px
+			width: 56%
+			background-position: center center
+			+bgCover
+			display: block
+			font-size: 60px
+			line-height: 1
+			color: $whitePure
+			padding-top: 220px
+
+			&.social
+				top: 0
+				right: 0
+				text-align: left
+				padding-left: 70px
+				background-image: url(img/social-bg.jpg)
+				z-index: 2
+
+
+			&.environmental
+				bottom: 0
+				left: 0
+				text-align: right
+				padding-right: 70px
+				background-image: url(img/environmental-bg.jpg)
+				z-index: 1
+
+		.quote
+			position: absolute
+			bottom: 0
+			right: 0
+			font-family: "lora"
+			font-size: 24px
+			line-height: 1.25
+			text-align: right
+			display: block
+			width: 260px
+
+			b
+				padding-top: 20px
+				font-size: 15px
+				display: block
+				font-weight: bold
+
+		&
+			.social
+				+animate(bounceOutRight)
+
+			.environmental
+				+animate(bounceOutLeft)
+
+		&.active
+			.social
+				+animate(bounceInRight)
+
+			.environmental
+				+animate(bounceInLeft)
+
+			
+	#shortcutsLinks
+		width: 100%
+		position: relative
+		height: 560px
+		+clearfix
+		overflow-x: hidden
+
+		main > div
+			+transition-duration(1s)
+			text-align: center
+			width: 400px
+			display: block
+			padding: 60px 40px 20px 40px
+			position: absolute
+			background: $whiteGray
+			z-index: 0
+			+scale(0.7)
+			margin-left: -200px
+			margin-top: -20px
+			+box-shadow(0, 15px, 50px, rgba($grayDarkBlue, 0.3))
+
+			h4, span
+				opacity: 0.4
+
+			h4
+				font-size: 60px
+				line-height: 1
+				margin-bottom: 50px
+				color: $grayDarkBlue
+
+			span
+				font-size: 20px
+				line-height: 1.5
+				color: $grayDarkBlue
+				font-weight: 300
+
+			a
+				position: relative
+				bottom: -50px
+				height: 70px
+				line-height: 70px
+				color: $whitePure
+				font-size: 16px
+				font-weight: 600
+				background: $grayDarkBlue
+				width: 180px
+				display: block
+				margin: 0 auto
+				opacity: 0
+				visibility: hidden
+
+			&.prevLeftSecond
+				z-index: 4
+				left: 6%
+
+			&.prev
+				z-index: 5
+				left: 26%
+
+			&.selected
+				+box-shadow(0, 15px, 100px, rgba($grayDarkBlue, 0.7))
+				background: $whitePure
+				opacity: 1
+				z-index: 2
+				+scale(1)
+				z-index: 10
+				left: 50%
+				margin-top: 0
+
+				h4, span
+					opacity: 1
+
+				a
+					opacity: 1
+					visibility: visible
+
+			&.next
+				z-index: 5
+				left: 74%
+
+			&.nextRightSecond
+				z-index: 4
+				left: 94%
+
+
+			&.hideLeft
+				left: -16%
+				+scale(0)
+				opacity: 0
+
+
+			&.hideRight
+				left: 114%
+				+scale(0)
+				opacity: 0
+
+
+
+		button
+			width: 80px
+			height: 50px
+			background-repeat: no-repeat
+			background-position: center center
+			background-color: transparent
+			display: block
+			position: absolute
+			bottom: 65px
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+			border: 0
+
+			&#next
+				right: 50%
+				margin-right: -320px
+				background-image: url(img/bt-next.png)
+
+			&#prev
+				left: 50%
+				margin-left: -320px
+				background-image: url(img/bt-prev.png)
+
+		&
+			+animate(fadeOutUp)
+				
+		&.active
+			+animate(fadeInUp)
+
+	#news
+		padding: 60px 0
+
+		h3
+			color: $grayLight
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 70px
+			line-height: 69px
+			display: block
+			padding: 20px
+
+		article
+			
+			width: 445px
+			padding: 20px
+			height: 270px
+			display: block
+			position: relative
+			float: left
+			
+
+			&.big
+				width: 890px
+				height: 540px
+				h1
+					font-size: 40px
+					left: 70px
+					bottom: 70px
+					right: 70px
+
+			a
+				width: 100%
+				height: 100%
+				overflow: hidden
+				display: block
+				
+				img
+					display: block
+					width: 100%
+					height: 100%
+					+scale(1)
+
+				&:hover
+					img
+						+filter(brightness, 60%)
+						+scale(1.2)
+
+
+			h1
+				display: block
+				position: absolute
+				left: 50px
+				right: 50px
+				bottom: 50px
+				margin: 0
+				font-size: 18px
+				line-height: 1.25
+				color: $whitePure
+
+			.label
+				background: $whitePure
+				position: absolute
+				top: 30px
+				right: 30px
+				display: block
+				padding: 15px
+				z-index: 1
+
+				a
+					font-size: 12px
+					color: grayDarkBlue
+					line-height: 1.2
+					font-weight: 600
+					margin-bottom: 5px
+					display: block
+
+				span
+					font-size: 10px
+					line-height: 10px
+
+		&
+			+animate(bounceOut)
+				
+		&.active
+			+animate(bounceIn)
+
+
+// ------------------------------------------------------------------
+// TEMP
+// ------------------------------------------------------------------
+
+
+#test
+	& > div
+		background: green
+		text-align: center
+		padding: 30px
+		border: 1px solid red
+
+
+		&.a
+			+col(12, 20, 0, 0)
+			height: 100px
+
+			+tablet
+				height: 200px
+				background: red
+
+			+mobile
+				height: 300px
+				background: blue
+
+
+		&.b
+			+col(6, 20, 0, 0)
+
+			+tablet
+				+col(12, 20, 0, 0)
+				height: 300px
+				background: black
+				color: #fff
+
+		&.c
+			+col(3, 20, 0, 0)
+
+			+tablet
+				+col(6, 20, 0, 0)
+
+		&.teste
+			+col(6, 20, 0, 0)
+
+		&.teste2
+			+col(6, 20, 0, 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

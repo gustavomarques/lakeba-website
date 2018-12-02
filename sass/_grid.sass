@@ -1,0 +1,98 @@
+$mobile-width: 414px //Iphone 8 Plus, Iphone X and Galaxy s9
+$tablet-width: 1024px //Ipad normal landscape, Ipad pro Portrait
+$default-width: 1440px //Notebooks and desktops
+$large-width: 1920px //Full HD
+$xLarge-width: 2560px //QHD, Imac27
+
+// Magic number (impact gaps, margin and font)
+// $magicNumber: 20px (_design-system.sass)
+
+$cols: 12
+$gutter: $magicNumber
+
+// --------------------------------------------------------
+// Project size specifications
+// --------------------------------------------------------
+// Screen Size: 1440px
+// Wrapper Size: 1400px
+// Sketch grid total: 1320 (gutter outside: on)
+// Gutter: 2 * magicNumber
+// Wrapper padding: 1 * magicNumber
+
+$screenSize: $default-width
+
+.wrapper
+	box-sizing: border-box
+	max-width: $screenSize
+	padding: 0 $gutter
+	display: block
+	margin: 0 auto
+	float: none
+	+clearfix
+
+.row
+	display: flex
+	flex-wrap: wrap
+
+.no-wrap
+	flex-wrap: nowrap
+
+
+// --------------------------------------------------------
+// Column size
+// --------------------------------------------------------
+
+@mixin col($colSize:12, $colPadding:$magicNumber, $colMargin:$magicNumber, $grow: 1)
+	flex: $colSize 1 ($colSize/$cols * 100%) - ($colMargin)
+	padding: $colPadding+px
+	margin: $colMargin+px
+
+	//Fixed or Flexibe
+
+	flex-grow: $grow // Initial value: 0 | grow: 1
+	// If you want a fixed grid based on flex-basis, uses "0" do not grow, otherwise uses "1"
+
+	flex-shrink: 1 // do not shrink - initial value: 1
+	//100% Ex.: If you want reduce this grid half 50%: use 5, reduce 70% uses 7
+
+
+
+
+
+
+// --------------------------------------------------------
+// Media queries
+// --------------------------------------------------------
+
+
+
+@mixin mobile 
+	@media (max-width: #{$mobile-width})
+		@content
+
+@mixin tablet 
+	@media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width})
+		@content
+
+@mixin default 
+	@media (min-width: #{$tablet-width + 1px}) and (max-width: #{$default-width}) 
+		@content
+
+@mixin large 
+	@media (min-width: #{$default-width + 1px}) and (max-width: #{$large-width}) 
+		@content
+
+@mixin xLarge 
+	@media (min-width: #{$large-width + 1px}) and (max-width: #{$xLarge-width}) 
+		@content
+
+@mixin xxLarge
+	@media (min-width: #{$xLarge-width + 1px}) 
+		@content
+
+
+
+
+
+
+

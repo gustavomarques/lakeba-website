@@ -1,0 +1,262 @@
+$magicNumber: 20px
+
+//gutter: 40px
+// grid: 70px
+
+
+// ------------------------------------------------------------------
+// Color Pallete
+// ------------------------------------------------------------------
+
+$blackPure: #000
+$black: #192330
+
+$whitePure: #fff
+$whiteGray: #f8f8f8
+$whiteBlue: #edf0f4 //ice-blue
+
+$grayVeryLight: #e0e6ef //very-light-blue
+$grayLight: #c1cedf //light-blue-grey
+$gray: #738397 //steel
+$grayDark: #50637c //slate
+$grayDarkBlue: #2c3a4c //dark-grey-blue
+
+$blueVeryLight: #f5feff //pale-grey
+$blueLight: #cef4ff //pale-blue
+$blue: #22a3dd //dark-sky-blue
+
+$pink: #ff3796 //barbie-pink
+$orange: #f5a623 //orangey-yellow
+$green: #0dbb3e //shamrock-green
+$red: #f42634 //strawberry
+
+//Saturated Colors | Good for gradients
+$gPurple: #6078EA //purple
+$gBlue: #17EAD9
+
+$primaryColor: $grayDarkBlue
+$oppositeColor: $whiteBlue
+
+$textColor: $primaryColor
+
+
+
+
+
+// ------------------------------------------------------------------
+// Gradient & BoxShadows
+// ------------------------------------------------------------------
+
+// Ex.: $gradientName: $blue, $red, $green, $purple (minimun 2 colors | no max)
+// Directions: top right bottom left 30g 45g...
+// Custom breakpoints ($blue 0%, $blue 10%, $green 25%, $green 39%, $orange 79%, $orange 100%)
+
+$blue2purple: $gBlue, $gPurple
+
+@mixin gradientBg($direction:top, $gradientName:$blue2purple)
+	background: -webkit-linear-gradient($direction, $gradientName)
+	background: -moz-linear-gradient($direction, $gradientName)
+	background: -o-linear-gradient($direction, $gradientName)
+	background: linear-gradient($direction, $gradientName)
+
+
+
+
+// Ex.: +box-shadow(0,0,30px,$gBlue)
+
+@mixin box-shadow($xAxis, $yAxis, $blur, $color, $inset: false)
+	@if $inset
+		-webkit-box-shadow:inset $xAxis $yAxis $blur $color
+		-moz-box-shadow:inset $xAxis $yAxis $blur $color
+		box-shadow:inset $xAxis $yAxis $blur $color
+	@else
+		-webkit-box-shadow: $xAxis $yAxis $blur $color
+		-moz-box-shadow: $xAxis $yAxis $blur $color
+		box-shadow: $xAxis $yAxis $blur $color
+
+
+// ------------------------------------------------------------------
+// Scroll css3
+// ------------------------------------------------------------------ 
+
+$scrollColor: $red
+$scrollBgColor: rgba($blackPure, 0.1)
+
+@mixin scrollbar($size, $primary, $secondary: lighten($primary, 25%))
+	::-webkit-scrollbar
+		width:  $size
+		height: $size
+
+	::-webkit-scrollbar-thumb
+		background: $primary
+
+	::-webkit-scrollbar-track
+		background: $secondary
+  
+	// For Internet Explorer
+	body
+		scrollbar-face-color: $primary
+		scrollbar-track-color: $secondary
+
+
+html
+	+scrollbar(20px, $scrollColor, $scrollBgColor)
+
+
+// ------------------------------------------------------------------
+// Tipography
+// ------------------------------------------------------------------
+
+// Montserrat + Lora
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Montserrat:200,300,400,600,800')
+
+body
+	font-family: 'Montserrat', sans-serif
+	font-weight: 400
+	font-style: normal
+	font-stretch: normal
+	letter-spacing: normal
+	color: $textColor
+
+//@import fonts/commet/styles.css
+//
+//@mixin fontIcon
+//	font-family: 'commet'
+//	speak: none
+//	font-style: normal
+//	font-weight: normal
+//	font-variant: normal
+//	text-transform: none
+//	line-height: 1
+//
+//	/* Better Font Rendering =========== */
+//	-webkit-font-smoothing: antialiased
+//	-moz-osx-font-smoothing: grayscale
+//
+//@mixin fontTitle($weight: 400)
+//	font-family: 'Oswald', sans-serif
+//	font-weight: $weight
+//
+//@mixin font($weight: 400)
+//	font-family: 'Montserrat', sans-serif
+//	font-weight: $weight
+//
+
+
+
+.title 
+	h1
+		font-size: $magicNumber*4
+		color: $whitePure
+		line-height: 1
+		font-weight: 800
+
+
+h1
+	font-size: $magicNumber*3
+	color: $whitePure
+	line-height: 1
+	font-weight: 600
+	margin-bottom: $magicNumber*2
+
+h2
+	font-size: $magicNumber*2
+	line-height: 1.2
+	color: $grayDark
+	font-weight: 600
+	margin-bottom: $magicNumber*2
+
+h3
+	font-size: $magicNumber*1.5
+	line-height: 1.2
+	font-weight: 300
+	margin-bottom: $magicNumber*1.5
+
+h4
+	font-size: $magicNumber*1
+	line-height: 1.5
+	font-weight: 600
+	margin-bottom: $magicNumber*1
+
+h5
+	font-size: $magicNumber*1
+	line-height: 1.5
+	font-weight: 300
+	margin-bottom: $magicNumber*1
+
+h6
+	font-size: $magicNumber*0.8
+	line-height: 2
+	font-weight: 600
+	margin-bottom: $magicNumber*1
+
+p
+	font-size: $magicNumber*0.7
+	line-height: 2
+	font-weight: 400
+	margin-bottom: $magicNumber*1
+
+
+.smallText
+	font-size: $magicNumber*0.5
+	line-height: 1.5
+
+a
+	text-decoration: none
+
+
+p
+	a, a:visited, a:focus, a:active
+
+		color: $blue
+		position: relative
+		
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -3px
+			height: 3px
+			background-color: $blue
+			width: 0
+			transition: width .4s
+
+		&:hover, &:focus, &:active
+			color: +darken($blue, 20%)
+			cursor: pointer
+
+			&:after
+				width: 100%
+
+
+// ------------------------------------------------------------------
+// Components
+// ------------------------------------------------------------------
+
+
+@mixin button3d
+	padding: 20px
+	font-size: 20px
+	line-height: 20px
+	text-decoration: none
+	border: none
+	text-transform: uppercase
+	text-align: center
+	color: $oppositeColor
+	background: $primaryColor
+	cursor: pointer
+	+box-sizing(border-box)
+	+border-radius(5px)
+	+box-shadow(+darken($primaryColor, 20%) 0 6px 0)
+	+transition
+	+font
+
+	&:hover, &:active
+		+box-shadow(+darken($primaryColor, 20%) 0 3px 0)
+		background: +darken($primaryColor, 5%)
+		top: 3px
+
+	&:active
+		+box-shadow(+darken($primaryColor, 20%) 0 0px 0)
+		background: +darken($corPrincipal, 10%)
+		top: 6px

@@ -1,0 +1,248 @@
+// ------------------------------------------------------------------
+// General
+// ------------------------------------------------------------------
+
+body
+	background: $whiteGray
+	padding: 0
+	margin: 0
+
+#contactHeader
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	background: rgba(0,0,0,0.4)
+	height: 30px
+
+
+	#tagline
+		+col(4, 0, 0)
+		text-align: left
+
+	#contactInfo
+		+col(8, 0, 0)
+		text-align: right
+
+		span
+			margin-left: 60px
+
+	span
+		display: inline-block
+		font-size: 10px
+		font-weight: 600
+		color: $whitePure
+		opacity: 0.5
+		line-height: 30px
+
+		&:hover
+			opacity: 1
+			+scale(1.2)
+
+
+#nav
+	position: fixed
+	top: 70px
+	left: 0
+	right: 0
+	z-index: 2
+
+	a
+		line-height: 60px
+		display: inline-block
+
+	#lakebaLogo
+		+col(2, 0, 0)
+		img
+			width: 140px
+			display: block
+
+		&:hover
+			img
+				+scale(1.2)
+
+
+	#navDesktop
+		+col(10,0,0)
+		text-align: right
+
+		& > ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+
+			& > li
+				display: inline-block
+				position: relative
+				line-height: 60px
+
+				a
+					display: block
+
+				& > a, & > span
+					color: $whitePure
+					padding: 20px 20px
+					line-height: 20px
+					font-size: 16px
+					font-weight: 600
+
+			& > li.drop-menu
+				cursor: pointer
+
+				& > ul
+					position: absolute
+					padding-top: 0px
+					top: 0
+					background-color: #fff
+					min-width: 100%
+					visibility: hidden
+					max-height: 1px
+					overflow: hidden
+					+transition-duration(0.6s)
+					z-index: -1
+
+					li
+						display: block
+
+						& a, & span
+							color: $gray
+							padding: 5px 20px
+							font-size: 12px
+							line-height: 15px
+							text-align: left
+							font-weight: 600
+
+					nav
+						span
+							display: block
+
+						a
+							font-weight: 400
+
+
+				&:hover
+					& > span
+						color: $grayDarkBlue
+
+					& > ul
+						padding-top: 60px
+						visibility: visible
+						height: auto
+						max-height: 1000px
+				
+			
+		
+	
+
+
+//
+//	#navDesktop
+//		+col(10,0,0)
+//		text-align: right
+//		
+//		& > nav
+//			display: inline-block
+//			position: relative
+//
+//			a
+//				color: $whitePure
+//				display: inline-block
+//				text-align: left
+//				padding: 20px
+//				line-height: 20px
+//
+//			&.submenu
+//				& > nav
+//					display: block
+//					position: absolute
+//					top: 0
+//					left: 0
+//					right: 0
+//					height: 1px
+//					max-height: 1px
+//					visibility: hidden
+//					z-index: 1
+//					overflow: hidden
+//
+//				&:hover
+//					& > nav
+//						visibility: visible
+//						height: auto
+//						max-height: 1000px
+//						background: $whitePure
+//
+//						a
+//							color: $grayDarkBlue
+//
+//
+
+
+
+
+header
+	height: 620px
+	background: url(img/header-home.jpg) center center no-repeat
+	+bgCover
+	display: block
+
+
+	
+//	+tablet
+//		height: 200px
+
+
+
+
+// ------------------------------------------------------------------
+// Home page
+// ------------------------------------------------------------------
+
+
+
+
+
+// ------------------------------------------------------------------
+// TEMP
+// ------------------------------------------------------------------
+
+
+#test
+	& > div
+		background: green
+		text-align: center
+		padding: 30px
+		border: 1px solid red
+
+
+		&.a
+			+col(12, 20, 0)
+
+		&.b
+			+col(6, 20, 0)
+
+		&.c
+			+col(3, 20, 0)
+
+			+tablet
+				+col(6, 20, 0)
+
+		&.teste
+			+col(6, 20, 0)
+
+		&.teste2
+			+col(6, 20, 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
