@@ -8,176 +8,39 @@ body
 	background-position: 590px 460px
 	background-repeat: no-repeat
 	overflow-x: hidden
-	
-	& > header
-		min-height: 500px
-		display: block
-		position: relative
-		background-position: center center
-		background-repeat: no-repeat
-		+bgCover
-
-	& > #footer
-		background: $grayDarkBlue
-		border-top: 20px solid $grayDark
-		padding-top: 50px
-		display: block
-		width: 100%
-
-		#sitemapWrapper
-
-			#contactFooter
-				+col(3,0,0,0)
-				
-				& > div
-					background: #1A2737
-					padding: 20px 40px
-					margin-top: 40px
-
-					span
-						color: $gray
-						font-size: 16px
-						line-height: 1.5
-						margin: 20px 0
-						+clearfix
-						display: block
-
-						b
-							display: block
-							color: $whitePure
-							font-weight: 600
-							margin-bottom: 5px
-
-			#sitemap
-				+col(9,0,0,0)
-				padding-top: 64px
-
-				a
-					color: $whitePure
-					opacity: 0.6
-					font-size: 14px
-					line-height: 20px
-					padding: 23px 0
-					display: block
-					position: relative
-
-					&:hover
-						opacity: 1
-
-				& > nav
-					+col(3,0,0,0)
-					padding-left: 50px
-					+clearfix
-
-					& > a
-						&:after
-							content: ''
-							position: absolute
-							left: 0px
-							bottom: 0
-							height: 2px
-							background-color: $whitePure
-							width: 20px
-
-						&:hover
-							&:after
-								width: 100px
 
 
-				nav.ventures
-					+col(6,0,0,0)
-					padding-left: 50px
-					nav
-						+clearfix
-						margin-top: 5px
-						a
-							font-size: 14px
-							+box-sizing(border-box)
-							width: 50%
-							float: left
-							padding: 14px 0
-							padding-left: 20px
-
-		h4
-			display: block
-			text-transform: uppercase
-			font-weight: 300
-			line-height: 20px
-			font-size: 30px
-			color: $gray
-			text-align: center
-			margin-top: 80px
-			margin-bottom: 0
-
-		#partnersFooter
-			padding: 40px
-			text-align: center
-			display: block
-			a
-				display: inline-block
-				padding: 20px
-				opacity: 0.3
-
-				img
-					display: block
-					height: 50px
-
-				&:hover
-					+scale(1.2)
-					opacity: 1
+	& > section
+		padding-top: 60px
+		padding-bottom: 60px
 
 
-		footer
-			background: $grayDark
-			padding: 20px 0
-			display: block
-			width: 100%
-			text-align: center
-
-			a
-				font-size: 14px
-				font-weight: 400
-				display: block
-				margin: 0 auto
-				line-height: 30px
-				color: rgba($whitePure, 0.4)
-				padding: 10px 0
-
-				&:hover
-					+scale(2)
-					color: $whitePure
-
-				img
-					display: inline-block
-					width: 24px
-					+translateY(5px)
-					margin: 0 5px
-
-
-
-
-
-
-
-
+#header
+	min-height: 500px
+	display: block
+	position: relative
+	background-position: center center
+	background-repeat: no-repeat
+	+bgCover
 
 
 #contactHeader
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
 	background: rgba(0,0,0,0.4)
+	position: relative
+	display: block
 	height: 30px
-	z-index: 2
 
 
 	#tagline
-		+col(4, 0, 0)
+		position: absolute
+		left: 40px
+		width: 220px
 		text-align: left
 
 	#contactInfo
-		+col(8, 0, 0)
+		position: absolute
+		left: 300px
+		right: 40px
 		text-align: right
 
 		span
@@ -196,11 +59,16 @@ body
 			+scale(1.2)
 
 
-#nav
-	position: fixed
-	top: 70px
-	left: 0
-	right: 0
+
+
+#navWrapper
+	position: relative
+	position: -webkit-sticky
+	position: sticky
+	display: block
+	+clearfix
+	padding-top: 40px
+	min-height: 60px
 	z-index: 2
 
 	a
@@ -208,7 +76,11 @@ body
 		display: inline-block
 
 	#lakebaLogo
-		+col(2, 0, 0)
+		position: absolute
+		left: 40px
+		display: block
+		padding-top: 12px
+
 		img
 			width: 140px
 			display: block
@@ -217,26 +89,280 @@ body
 			img
 				+scale(1.2)
 
-
-	#navDesktop
-		+col(10,0,0)
+	#nav
 		text-align: right
+		position: absolute
+		left: 180px
+		right: 40px
 
-		a
+		& > li
 			display: inline-block
 			position: relative
-			line-height: 60px
-			color: $whitePure
-			padding: 20px 30px
-			line-height: 20px
-			font-size: 16px
-			font-weight: 600
+			+clearfix
+			opacity: 0.6
+
+			& > a
+				line-height: 60px
+				color: $whitePure
+				padding: 20px 40px
+				line-height: 20px
+				font-size: 16px
+				font-weight: 600
+
+			&:hover
+				+scale(1.2)
+				opacity: 1
+
+
+		
+		li.submenu
+
+			& > ul
+				height: auto
+				max-height: 1px
+				overflow: hidden
+				+box-sizing(border-box)
+				+clearfix
+				display: block
+				width: 100%
+				position: absolute
+				padding: 0
+				background: $whitePure
+				z-index: -1
+				top: 0
+				+clearfix
+				+box-shadow(0, 0px, 50px, rgba($grayDarkBlue, 0.6))
+				opacity: 0
+
+				*
+					display: block
+					text-align: left
+					color: $grayDarkBlue
+					font-weight: 600
+					font-size: 12px
+					line-height: 15px
+
+				a, span
+					padding: 15px 30px
+					position: relative
+					opacity: 0.6
+				
+				a:hover
+					opacity: 1
+
+				& > li > a
+					&:after
+						content: ''
+						position: absolute
+						left: 30px
+						bottom: -2px
+						height: 2px
+						background-color: $grayDarkBlue
+						width: 20px
+						transition: width .4s
+
+					&:hover
+						&:after
+							width: 80px
+
+
+				nav
+					span
+						padding-bottom: 10px
+
+					a
+						padding: 5px 10px
+						margin-left: 40px
+
+						&:after
+							content: ' '
+							position: absolute
+							left: -10px
+							top: 50%
+							+translateY(-50%)
+							background-color: $grayDarkBlue
+							width: 3px
+							height: 2px
+							transition: width .4s
+							display: block
+
+						&:hover
+							&:after
+								height: 25px
+
+
+			&:hover
+				& > ul
+					height: auto
+					max-height: 1000px
+					padding: 60px 0px 20px 0
+					opacity: 1
+
+				& > a
+					color: $grayDarkBlue
+					z-index: 2
+
+					&:after
+						content: ''
+						position: absolute
+						left: 30px
+						bottom: -2px
+						height: 2px
+						background-color: $grayDarkBlue
+						width: 20px
+						transition: width .4s
+
+					&:hover
+						opacity: 1
+						
+						&:after
+							width: 80px
 
 
 
-section
-	padding-top: 60px
-	padding-bottom: 60px
+
+#footer
+	background: $grayDarkBlue
+	border-top: 20px solid $grayDark
+	padding-top: 50px
+	display: block
+	width: 100%
+
+	#sitemapWrapper
+
+		#contactFooter
+			+col(3,0,0,0)
+			
+			& > div
+				background: #1A2737
+				padding: 20px 40px
+				margin-top: 40px
+
+				span
+					color: $gray
+					font-size: 16px
+					line-height: 1.5
+					margin: 20px 0
+					+clearfix
+					display: block
+
+					b
+						display: block
+						color: $whitePure
+						font-weight: 600
+						margin-bottom: 5px
+
+		#sitemap
+			+col(9,0,0,0)
+			padding-top: 64px
+
+			a
+				color: $whitePure
+				opacity: 0.6
+				font-size: 14px
+				line-height: 20px
+				padding: 23px 0
+				display: block
+				position: relative
+
+				&:hover
+					opacity: 1
+
+			& > nav
+				+col(3,0,0,0)
+				padding-left: 50px
+				+clearfix
+
+				& > a
+					&:after
+						content: ''
+						position: absolute
+						left: 0px
+						bottom: 0
+						height: 2px
+						background-color: $whitePure
+						width: 20px
+
+					&:hover
+						&:after
+							width: 100px
+
+
+			nav.ventures
+				+col(6,0,0,0)
+				padding-left: 50px
+				nav
+					+clearfix
+					margin-top: 5px
+					a
+						font-size: 14px
+						+box-sizing(border-box)
+						width: 50%
+						float: left
+						padding: 14px 0
+						padding-left: 20px
+
+	h4
+		display: block
+		text-transform: uppercase
+		font-weight: 300
+		line-height: 20px
+		font-size: 30px
+		color: $gray
+		text-align: center
+		margin-top: 80px
+		margin-bottom: 0
+
+	#partnersFooter
+		padding: 40px
+		text-align: center
+		display: block
+		a
+			display: inline-block
+			padding: 20px
+			opacity: 0.3
+
+			img
+				display: block
+				height: 50px
+
+			&:hover
+				+scale(1.2)
+				opacity: 1
+
+
+	footer
+		background: $grayDark
+		padding: 20px 0
+		display: block
+		width: 100%
+		text-align: center
+
+		a
+			font-size: 14px
+			font-weight: 400
+			display: block
+			margin: 0 auto
+			line-height: 30px
+			color: rgba($whitePure, 0.4)
+			padding: 10px 0
+
+			&:hover
+				+scale(2)
+				color: $whitePure
+
+			img
+				display: inline-block
+				width: 24px
+				+translateY(5px)
+				margin: 0 5px
+
+
+
+
+
+
+
 
 
 
@@ -250,33 +376,36 @@ section
 	header
 		height: 620px
 		background-image: url(img/header-home.jpg)
-		padding-top: 245px
 
 		h1, h2
 			color: $whitePure
 			line-height: 60px
 			+col(8,0,0,0)
 
+
 		h1
 			margin-bottom: 30px
 
 		h2
 			font-weight: 200
-			font-size: 50px
+			font-size: 50px	
+
+	#titleWrapper
+		padding-top: 160px
+
+
 
 	#headerComplement
-		.row
+		section
 			position: relative
-			justify-content: flex-end
 			padding-top: 0
 
 			#blueBox
 				position: absolute
 				left: 0
 				top: -50px
-				width: 25%
+				width: 360px
 				background: $grayDarkBlue
-				+col(4,0,0,0)
 				padding: 45px 30px
 				display: block
 				z-index: 1
@@ -291,14 +420,14 @@ section
 					opacity: 0.6
 					font-weight: 600
 
+
 					&:hover
 						opacity: 1
 						+scale(1.2)
 
 			#venturesLinks
-				+animate(bounceInRight)
-				+col(9,0,0,0)
-				padding: 40px 0 0 40px
+				+animate(fadeInUp)
+				padding: 40px 0 0 400px
 
 				h3
 					font-weight: 600
@@ -333,20 +462,27 @@ section
 
 	#solutionsByIndustry
 		&.active
-			+animate(bounceIn)
+			// Loop animation.
+			@for $i from 1 through 6
+				.industryBox
+					&:nth-of-type(#{$i})
+						+animate(zoomIn)
+						animation-delay: $i * 0.3s
 
-		+animate(bounceOut)
+		
 		align-items: center
 		justify-content: center
+		padding-top: 60px
+		padding-bottom: 60px
 
 		h3
 			color: $grayLight
 			text-transform: uppercase
 			font-weight: 600
-			font-size: 70px
-			line-height: 69px
+			font-size: 4.4vw
+			line-height: 4.4vw
 			+col(6,0,4,0)
-			padding: 80px 0
+			padding-top: 80px
 
 		.industryBox
 			+col(3,30,2,0)
@@ -452,7 +588,7 @@ section
 		.quote
 			position: absolute
 			bottom: 0
-			right: 0
+			right: 40px
 			font-family: "lora"
 			font-size: 24px
 			line-height: 1.25
@@ -468,17 +604,17 @@ section
 
 		&
 			.social
-				+animate(bounceOutRight)
+				+animate(slideOutRight)
 
 			.environmental
-				+animate(bounceOutLeft)
+				+animate(slideOutLeft)
 
 		&.active
 			.social
-				+animate(bounceInRight)
+				+animate(slideInRight)
 
 			.environmental
-				+animate(bounceInLeft)
+				+animate(slideInLeft)
 
 			
 	#shortcutsLinks
@@ -604,13 +740,14 @@ section
 				background-image: url(img/bt-prev.png)
 
 		&
-			+animate(fadeOutUp)
+			+animate(bounceOut)
 				
 		&.active
-			+animate(fadeInUp)
+			+animate(bounceIn)
 
 	#news
-		padding: 60px 0
+		padding-top: 60px
+		padding-bottom: 60px
 
 		h3
 			color: $grayLight
@@ -623,16 +760,17 @@ section
 
 		article
 			
-			width: 445px
+			width: 28.9vw
 			padding: 20px
 			height: 270px
 			display: block
 			position: relative
 			float: left
+			+animate(fadeOut)
 			
 
 			&.big
-				width: 890px
+				width: 57.8vw
 				height: 540px
 				h1
 					font-size: 40px
@@ -680,7 +818,7 @@ section
 
 				a
 					font-size: 12px
-					color: grayDarkBlue
+					color: $grayDarkBlue
 					line-height: 1.2
 					font-weight: 600
 					margin-bottom: 5px
@@ -690,71 +828,42 @@ section
 					font-size: 10px
 					line-height: 10px
 
-		&
-			+animate(bounceOut)
-				
-		&.active
-			+animate(bounceIn)
+		.viewMore
+			display: inline-block
+			position: relative
+			float: left
+			font-size: 25px
+			padding: 20px
+			color: $grayDarkBlue
+			text-transform: uppercase
+			font-weight: 600
 
+			&:after
+				content: ''
+				position: absolute
+				left: 20px
+				bottom: 0
+				height: 5px
+				background-color: $grayDarkBlue
+				width: 30px
+				transition: width .4s
+
+			&:hover, &:focus, &:active
+				color: +darken($blue, 20%)
+				cursor: pointer
+
+				&:after
+					width: 155px
+
+		&.active
+			// Loop animation.
+			@for $i from 2 through 10
+				article
+					&:nth-child(#{$i})
+						+animate(fadeIn)
+						animation-delay: $i * 0.5s
 
 // ------------------------------------------------------------------
 // TEMP
 // ------------------------------------------------------------------
-
-
-#test
-	& > div
-		background: green
-		text-align: center
-		padding: 30px
-		border: 1px solid red
-
-
-		&.a
-			+col(12, 20, 0, 0)
-			height: 100px
-
-			+tablet
-				height: 200px
-				background: red
-
-			+mobile
-				height: 300px
-				background: blue
-
-
-		&.b
-			+col(6, 20, 0, 0)
-
-			+tablet
-				+col(12, 20, 0, 0)
-				height: 300px
-				background: black
-				color: #fff
-
-		&.c
-			+col(3, 20, 0, 0)
-
-			+tablet
-				+col(6, 20, 0, 0)
-
-		&.teste
-			+col(6, 20, 0, 0)
-
-		&.teste2
-			+col(6, 20, 0, 0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
