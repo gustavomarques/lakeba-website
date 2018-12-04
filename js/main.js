@@ -38,4 +38,25 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		stickyNav();
 	});
+
+	
 });
+
+var $btnMobile = $('#navMobileButton');
+
+$btnMobile.click(function(){
+	$('#nav').toggleClass('show');
+	$('#navMobileButton').toggleClass('active');
+})
+
+
+
+
+
+
+
+
+
+
+
+
