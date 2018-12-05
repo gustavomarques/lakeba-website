@@ -41,6 +41,8 @@
 				pointer-events: auto
 				z-index: 99
 
+			#nav.show
+				padding-right: 20px
 
 			#nav
 				left: 100%
@@ -53,7 +55,6 @@
 				height: auto
 				min-height: 100%
 				background: rgba($grayDarkBlue, 0.9)
-				padding-right: 20px
 
 				& > li
 					+animate(fadeOutLeft)
@@ -242,7 +243,7 @@
 				padding: 0
 				width: 100%
 				margin-bottom: 20px
-				height: 160px
+				height: 140px
 
 				h1
 					left: 20px
@@ -253,15 +254,15 @@
 
 
 				&.big
-					height: 320px
+					height: 200px
 
 					h1
 						font-size: 18px
 
 				.label
 					padding: 10px
-					top: 10px
-					right: 10px
+					top: -10px
+					right: -10px
 
 					a
 						margin: 0
@@ -350,6 +351,8 @@
 				pointer-events: auto
 				z-index: 99
 
+			#nav.show
+				padding-right: 20px
 
 			#nav
 				left: 100%
@@ -362,7 +365,7 @@
 				height: auto
 				min-height: 100%
 				background: rgba($grayDarkBlue, 0.9)
-				padding-right: 20px
+				
 
 				& > li
 					+animate(fadeOutLeft)
@@ -371,8 +374,26 @@
 					display: block
 
 				&.show
-					left: 0
+					left: auto
 					max-width: 100%
+
+					.submenu
+						ul
+							padding-top: 10px
+							padding-bottom: 10px
+
+							nav
+								span
+									font-size: 20px
+									line-height: 30px
+
+								a
+									font-size: 16px
+
+					li
+						a
+							font-size: 20px
+							line-height: 30px
 
 					@for $i from 1 through 30
 						& li, nav
@@ -422,9 +443,12 @@
 
 		#solutionsByIndustry
 
+			h3
+				font-size: 34px
+				line-height: 40px
+
 			.industryBox
 				height: 220px
-
 				span
 					top: 140px
 					left: 20px
@@ -507,11 +531,75 @@
 						padding-left: 0
 						padding-right: 20px
 
++small
+	#homepage.small
+		#headerComplement
+			section
+				#blueBox
+					padding-left: 20px
+					padding-right: 20px
+					width: 280px
+
+					a
+						padding-left: 10px
+						padding-right: 10px
+						font-size: 24px
+
+				#venturesLinks
+					padding-left: 320px
+
+					nav
+						a
+							padding: 15px 20px 
+							opacity: 0.6
+
+		#navWrapper
+			#nav
+				right: 20px
+
+				& > li
+					& > a
+						padding: 20px
+
+		#news
+			article
+				height: 195px
+
+				&.big
+					height: 390px
+					
+					h1
+						left: 60px
+						right: 60px
+						bottom: 60px
+						font-size: 30px
+
+
+				h1
+					left: 40px
+					right: 40px
+					bottom: 40px
+					font-size: 16px
+
+				.label
+					padding: 10px
+					top: 30px
+					right: 30px
+
+					a
+						margin: 0
+
+
+
+
 +default
+
 
 +large 
 
+
 +xLarge 
+
 
 +xxLarge
 

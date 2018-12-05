@@ -15,6 +15,7 @@ else {
 
 
 $(document).ready(function() {
+
 	$('#nav > li:has(ul)').addClass('submenu');
 
 	// grab the initial top offset of the navigation 

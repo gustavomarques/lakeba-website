@@ -277,7 +277,7 @@ p a:hover:after, p a:focus:after, p a:active:after, p a:visited:hover:after, p a
   width: 100%;
 }
 
-/* line 24, sass/_grid.sass */
+/* line 25, sass/_grid.sass */
 .wrapper {
   box-sizing: border-box;
   width: 100%;
@@ -298,13 +298,13 @@ p a:hover:after, p a:focus:after, p a:active:after, p a:visited:hover:after, p a
   clear: both;
 }
 
-/* line 35, sass/_grid.sass */
+/* line 36, sass/_grid.sass */
 .row {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* line 39, sass/_grid.sass */
+/* line 40, sass/_grid.sass */
 .no-wrap {
   flex-wrap: nowrap;
 }
@@ -3705,7 +3705,25 @@ body > section {
   display: block;
   width: 100%;
 }
-/* line 326, sass/_layout.sass */
+/* line 50, sass/_framework-base.sass */
+#footer:before, #footer:after {
+  content: " ";
+  display: table;
+}
+/* line 55, sass/_framework-base.sass */
+#footer:after {
+  clear: both;
+}
+/* line 50, sass/_framework-base.sass */
+#footer #sitemapWrapper:before, #footer #sitemapWrapper:after {
+  content: " ";
+  display: table;
+}
+/* line 55, sass/_framework-base.sass */
+#footer #sitemapWrapper:after {
+  clear: both;
+}
+/* line 328, sass/_layout.sass */
 #footer #sitemapWrapper #contactFooter {
   flex: 3 1 25%;
   padding: 0px;
@@ -3713,13 +3731,13 @@ body > section {
   flex-grow: 0;
   flex-shrink: 1;
 }
-/* line 329, sass/_layout.sass */
+/* line 331, sass/_layout.sass */
 #footer #sitemapWrapper #contactFooter > div {
   background: #1A2737;
   padding: 20px 40px;
   margin-top: 40px;
 }
-/* line 334, sass/_layout.sass */
+/* line 336, sass/_layout.sass */
 #footer #sitemapWrapper #contactFooter > div span {
   color: #738397;
   font-size: 16px;
@@ -3736,14 +3754,14 @@ body > section {
 #footer #sitemapWrapper #contactFooter > div span:after {
   clear: both;
 }
-/* line 342, sass/_layout.sass */
+/* line 344, sass/_layout.sass */
 #footer #sitemapWrapper #contactFooter > div span b {
   display: block;
   color: #fff;
   font-weight: 600;
   margin-bottom: 5px;
 }
-/* line 348, sass/_layout.sass */
+/* line 350, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap {
   flex: 9 1 75%;
   padding: 0px;
@@ -3752,7 +3770,7 @@ body > section {
   flex-shrink: 1;
   padding-top: 64px;
 }
-/* line 352, sass/_layout.sass */
+/* line 354, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap a {
   color: #fff;
   opacity: 0.6;
@@ -3762,11 +3780,11 @@ body > section {
   display: block;
   position: relative;
 }
-/* line 361, sass/_layout.sass */
+/* line 363, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap a:hover {
   opacity: 1;
 }
-/* line 364, sass/_layout.sass */
+/* line 366, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap > nav {
   flex: 3 1 25%;
   padding: 0px;
@@ -3784,7 +3802,7 @@ body > section {
 #footer #sitemapWrapper #sitemap > nav:after {
   clear: both;
 }
-/* line 370, sass/_layout.sass */
+/* line 372, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap > nav > a:after {
   content: "";
   position: absolute;
@@ -3794,11 +3812,11 @@ body > section {
   background-color: #fff;
   width: 20px;
 }
-/* line 380, sass/_layout.sass */
+/* line 382, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap > nav > a:hover:after {
   width: 100px;
 }
-/* line 384, sass/_layout.sass */
+/* line 386, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap nav.ventures {
   flex: 6 1 50%;
   padding: 0px;
@@ -3807,7 +3825,7 @@ body > section {
   flex-shrink: 1;
   padding-left: 50px;
 }
-/* line 387, sass/_layout.sass */
+/* line 389, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap nav.ventures nav {
   margin-top: 5px;
 }
@@ -3820,7 +3838,7 @@ body > section {
 #footer #sitemapWrapper #sitemap nav.ventures nav:after {
   clear: both;
 }
-/* line 390, sass/_layout.sass */
+/* line 392, sass/_layout.sass */
 #footer #sitemapWrapper #sitemap nav.ventures nav a {
   font-size: 14px;
   -moz-box-sizing: border-box;
@@ -3831,7 +3849,7 @@ body > section {
   padding: 14px 0;
   padding-left: 20px;
 }
-/* line 398, sass/_layout.sass */
+/* line 400, sass/_layout.sass */
 #footer h4 {
   display: block;
   text-transform: uppercase;
@@ -3843,24 +3861,33 @@ body > section {
   margin-top: 80px;
   margin-bottom: 0;
 }
-/* line 409, sass/_layout.sass */
+/* line 411, sass/_layout.sass */
 #footer #partnersFooter {
   padding: 40px;
   text-align: center;
   display: block;
 }
-/* line 413, sass/_layout.sass */
+/* line 50, sass/_framework-base.sass */
+#footer #partnersFooter:before, #footer #partnersFooter:after {
+  content: " ";
+  display: table;
+}
+/* line 55, sass/_framework-base.sass */
+#footer #partnersFooter:after {
+  clear: both;
+}
+/* line 416, sass/_layout.sass */
 #footer #partnersFooter a {
   display: inline-block;
   padding: 20px;
   opacity: 0.3;
 }
-/* line 418, sass/_layout.sass */
+/* line 421, sass/_layout.sass */
 #footer #partnersFooter a img {
   display: block;
   height: 50px;
 }
-/* line 422, sass/_layout.sass */
+/* line 425, sass/_layout.sass */
 #footer #partnersFooter a:hover {
   -moz-transform: scale(1.2, 1.2);
   -ms-transform: scale(1.2, 1.2);
@@ -3868,7 +3895,7 @@ body > section {
   transform: scale(1.2, 1.2);
   opacity: 1;
 }
-/* line 427, sass/_layout.sass */
+/* line 430, sass/_layout.sass */
 #footer footer {
   background: #50637c;
   padding: 20px 0;
@@ -3876,7 +3903,16 @@ body > section {
   width: 100%;
   text-align: center;
 }
-/* line 434, sass/_layout.sass */
+/* line 50, sass/_framework-base.sass */
+#footer footer:before, #footer footer:after {
+  content: " ";
+  display: table;
+}
+/* line 55, sass/_framework-base.sass */
+#footer footer:after {
+  clear: both;
+}
+/* line 438, sass/_layout.sass */
 #footer footer a {
   font-size: 14px;
   font-weight: 400;
@@ -3886,7 +3922,7 @@ body > section {
   color: rgba(255, 255, 255, 0.4);
   padding: 10px 0;
 }
-/* line 443, sass/_layout.sass */
+/* line 447, sass/_layout.sass */
 #footer footer a:hover {
   -moz-transform: scale(2, 2);
   -ms-transform: scale(2, 2);
@@ -3894,7 +3930,7 @@ body > section {
   transform: scale(2, 2);
   color: #fff;
 }
-/* line 447, sass/_layout.sass */
+/* line 451, sass/_layout.sass */
 #footer footer a img {
   display: inline-block;
   width: 24px;
@@ -3905,12 +3941,12 @@ body > section {
   margin: 0 5px;
 }
 
-/* line 469, sass/_layout.sass */
+/* line 473, sass/_layout.sass */
 #homepage header {
   height: 620px;
   background-image: url(img/header-home.jpg);
 }
-/* line 473, sass/_layout.sass */
+/* line 477, sass/_layout.sass */
 #homepage header h1, #homepage header h2 {
   color: #fff;
   line-height: 60px;
@@ -3920,25 +3956,25 @@ body > section {
   flex-grow: 0;
   flex-shrink: 1;
 }
-/* line 479, sass/_layout.sass */
+/* line 483, sass/_layout.sass */
 #homepage header h1 {
   margin-bottom: 30px;
 }
-/* line 482, sass/_layout.sass */
+/* line 486, sass/_layout.sass */
 #homepage header h2 {
   font-weight: 200;
   font-size: 50px;
 }
-/* line 486, sass/_layout.sass */
+/* line 490, sass/_layout.sass */
 #homepage #titleWrapper {
   padding-top: 160px;
 }
-/* line 492, sass/_layout.sass */
+/* line 496, sass/_layout.sass */
 #homepage #headerComplement section {
   position: relative;
   padding-top: 0;
 }
-/* line 496, sass/_layout.sass */
+/* line 500, sass/_layout.sass */
 #homepage #headerComplement section #blueBox {
   position: absolute;
   left: 0;
@@ -3949,7 +3985,7 @@ body > section {
   display: block;
   z-index: 1;
 }
-/* line 506, sass/_layout.sass */
+/* line 510, sass/_layout.sass */
 #homepage #headerComplement section #blueBox a {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3962,7 +3998,7 @@ body > section {
   opacity: 0.6;
   font-weight: 600;
 }
-/* line 517, sass/_layout.sass */
+/* line 521, sass/_layout.sass */
 #homepage #headerComplement section #blueBox a:hover {
   opacity: 1;
   -moz-transform: scale(1.2, 1.2);
@@ -3970,7 +4006,7 @@ body > section {
   -webkit-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 521, sass/_layout.sass */
+/* line 525, sass/_layout.sass */
 #homepage #headerComplement section #venturesLinks {
   -webkit-animation: fadeInUp 1s 0.2s ease both;
   -moz-animation: fadeInUp 1s 0.2s ease both;
@@ -3979,14 +4015,14 @@ body > section {
   animation: fadeInUp 1s 0.2s ease both;
   padding: 40px 0 0 400px;
 }
-/* line 525, sass/_layout.sass */
+/* line 529, sass/_layout.sass */
 #homepage #headerComplement section #venturesLinks h3 {
   font-weight: 600;
   padding-bottom: 30px;
   margin-bottom: 20px;
   position: relative;
 }
-/* line 531, sass/_layout.sass */
+/* line 535, sass/_layout.sass */
 #homepage #headerComplement section #venturesLinks h3:after {
   position: absolute;
   left: 0;
@@ -3997,7 +4033,7 @@ body > section {
   background: #2c3a4c;
   content: " ";
 }
-/* line 542, sass/_layout.sass */
+/* line 546, sass/_layout.sass */
 #homepage #headerComplement section #venturesLinks nav a {
   flex: 3 1 25%;
   padding: 0px;
@@ -4009,7 +4045,7 @@ body > section {
   padding: 20px 40px;
   opacity: 0.6;
 }
-/* line 549, sass/_layout.sass */
+/* line 553, sass/_layout.sass */
 #homepage #headerComplement section #venturesLinks nav a:hover {
   -moz-transform: scale(1.2, 1.2);
   -ms-transform: scale(1.2, 1.2);
@@ -4018,14 +4054,14 @@ body > section {
   background: #edf0f4;
   opacity: 1;
 }
-/* line 556, sass/_layout.sass */
+/* line 560, sass/_layout.sass */
 #homepage #solutionsByIndustry {
   align-items: center;
   justify-content: center;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-/* line 561, sass/_layout.sass */
+/* line 565, sass/_layout.sass */
 #homepage #solutionsByIndustry.active .industryBox:nth-of-type(1) {
   -webkit-animation: zoomIn 1s 0.2s ease both;
   -moz-animation: zoomIn 1s 0.2s ease both;
@@ -4034,7 +4070,7 @@ body > section {
   animation: zoomIn 1s 0.2s ease both;
   animation-delay: 0.3s;
 }
-/* line 561, sass/_layout.sass */
+/* line 565, sass/_layout.sass */
 #homepage #solutionsByIndustry.active .industryBox:nth-of-type(2) {
   -webkit-animation: zoomIn 1s 0.2s ease both;
   -moz-animation: zoomIn 1s 0.2s ease both;
@@ -4043,7 +4079,7 @@ body > section {
   animation: zoomIn 1s 0.2s ease both;
   animation-delay: 0.6s;
 }
-/* line 561, sass/_layout.sass */
+/* line 565, sass/_layout.sass */
 #homepage #solutionsByIndustry.active .industryBox:nth-of-type(3) {
   -webkit-animation: zoomIn 1s 0.2s ease both;
   -moz-animation: zoomIn 1s 0.2s ease both;
@@ -4052,7 +4088,7 @@ body > section {
   animation: zoomIn 1s 0.2s ease both;
   animation-delay: 0.9s;
 }
-/* line 561, sass/_layout.sass */
+/* line 565, sass/_layout.sass */
 #homepage #solutionsByIndustry.active .industryBox:nth-of-type(4) {
   -webkit-animation: zoomIn 1s 0.2s ease both;
   -moz-animation: zoomIn 1s 0.2s ease both;
@@ -4061,7 +4097,7 @@ body > section {
   animation: zoomIn 1s 0.2s ease both;
   animation-delay: 1.2s;
 }
-/* line 561, sass/_layout.sass */
+/* line 565, sass/_layout.sass */
 #homepage #solutionsByIndustry.active .industryBox:nth-of-type(5) {
   -webkit-animation: zoomIn 1s 0.2s ease both;
   -moz-animation: zoomIn 1s 0.2s ease both;
@@ -4070,7 +4106,7 @@ body > section {
   animation: zoomIn 1s 0.2s ease both;
   animation-delay: 1.5s;
 }
-/* line 561, sass/_layout.sass */
+/* line 565, sass/_layout.sass */
 #homepage #solutionsByIndustry.active .industryBox:nth-of-type(6) {
   -webkit-animation: zoomIn 1s 0.2s ease both;
   -moz-animation: zoomIn 1s 0.2s ease both;
@@ -4079,7 +4115,7 @@ body > section {
   animation: zoomIn 1s 0.2s ease both;
   animation-delay: 1.8s;
 }
-/* line 571, sass/_layout.sass */
+/* line 575, sass/_layout.sass */
 #homepage #solutionsByIndustry h3 {
   color: #c1cedf;
   text-transform: uppercase;
@@ -4093,7 +4129,7 @@ body > section {
   flex-shrink: 1;
   padding-top: 80px;
 }
-/* line 580, sass/_layout.sass */
+/* line 584, sass/_layout.sass */
 #homepage #solutionsByIndustry .industryBox {
   flex: 3 1 23%;
   padding: 30px;
@@ -4109,7 +4145,7 @@ body > section {
   -o-animation: zoomOut 1s 0.2s ease both;
   animation: zoomOut 1s 0.2s ease both;
 }
-/* line 587, sass/_layout.sass */
+/* line 591, sass/_layout.sass */
 #homepage #solutionsByIndustry .industryBox img {
   display: block;
   width: 40%;
@@ -4125,7 +4161,7 @@ body > section {
   -o-filter: saturate(0%);
   filter: saturate(0%);
 }
-/* line 598, sass/_layout.sass */
+/* line 602, sass/_layout.sass */
 #homepage #solutionsByIndustry .industryBox span {
   position: absolute;
   top: 190px;
@@ -4140,7 +4176,7 @@ body > section {
   color: #50637c;
   opacity: 0;
 }
-/* line 612, sass/_layout.sass */
+/* line 616, sass/_layout.sass */
 #homepage #solutionsByIndustry .industryBox:hover {
   -moz-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
@@ -4151,7 +4187,7 @@ body > section {
   -moz-box-shadow: 0 15px 100px rgba(44, 58, 76, 0.2);
   box-shadow: 0 15px 100px rgba(44, 58, 76, 0.2);
 }
-/* line 617, sass/_layout.sass */
+/* line 621, sass/_layout.sass */
 #homepage #solutionsByIndustry .industryBox:hover img {
   -moz-transform: scale(0.7, 0.7);
   -ms-transform: scale(0.7, 0.7);
@@ -4165,11 +4201,11 @@ body > section {
   -o-filter: saturate(100%);
   filter: saturate(100%);
 }
-/* line 623, sass/_layout.sass */
+/* line 627, sass/_layout.sass */
 #homepage #solutionsByIndustry .industryBox:hover span {
   opacity: 1;
 }
-/* line 626, sass/_layout.sass */
+/* line 630, sass/_layout.sass */
 #homepage #corporateResponsibility {
   height: 620px;
   position: relative;
@@ -4185,7 +4221,7 @@ body > section {
 #homepage #corporateResponsibility:after {
   clear: both;
 }
-/* line 633, sass/_layout.sass */
+/* line 637, sass/_layout.sass */
 #homepage #corporateResponsibility .wrapper {
   position: relative;
   height: 620px;
@@ -4199,11 +4235,11 @@ body > section {
 #homepage #corporateResponsibility .wrapper:after {
   clear: both;
 }
-/* line 638, sass/_layout.sass */
+/* line 642, sass/_layout.sass */
 #homepage #corporateResponsibility h3 {
   position: absolute;
   top: 80px;
-  left: 10%;
+  left: 0;
   right: 62%;
   color: #c1cedf;
   text-transform: uppercase;
@@ -4214,7 +4250,7 @@ body > section {
   text-align: right;
   z-index: 1;
 }
-/* line 652, sass/_layout.sass */
+/* line 656, sass/_layout.sass */
 #homepage #corporateResponsibility .responsibilityType {
   position: absolute;
   height: 400px;
@@ -4230,7 +4266,7 @@ body > section {
   color: #fff;
   padding-top: 220px;
 }
-/* line 665, sass/_layout.sass */
+/* line 669, sass/_layout.sass */
 #homepage #corporateResponsibility .responsibilityType.social {
   top: 0;
   right: 0;
@@ -4239,7 +4275,7 @@ body > section {
   background-image: url(img/social-bg.jpg);
   z-index: 2;
 }
-/* line 674, sass/_layout.sass */
+/* line 678, sass/_layout.sass */
 #homepage #corporateResponsibility .responsibilityType.environmental {
   bottom: 0;
   left: 0;
@@ -4248,7 +4284,7 @@ body > section {
   background-image: url(img/environmental-bg.jpg);
   z-index: 1;
 }
-/* line 682, sass/_layout.sass */
+/* line 686, sass/_layout.sass */
 #homepage #corporateResponsibility .quote {
   position: absolute;
   bottom: 0;
@@ -4260,14 +4296,14 @@ body > section {
   display: block;
   width: 260px;
 }
-/* line 693, sass/_layout.sass */
+/* line 697, sass/_layout.sass */
 #homepage #corporateResponsibility .quote b {
   padding-top: 20px;
   font-size: 15px;
   display: block;
   font-weight: bold;
 }
-/* line 700, sass/_layout.sass */
+/* line 704, sass/_layout.sass */
 #homepage #corporateResponsibility .social {
   -webkit-animation: slideOutRight 1s 0.2s ease both;
   -moz-animation: slideOutRight 1s 0.2s ease both;
@@ -4275,7 +4311,7 @@ body > section {
   -o-animation: slideOutRight 1s 0.2s ease both;
   animation: slideOutRight 1s 0.2s ease both;
 }
-/* line 703, sass/_layout.sass */
+/* line 707, sass/_layout.sass */
 #homepage #corporateResponsibility .environmental {
   -webkit-animation: slideOutLeft 1s 0.2s ease both;
   -moz-animation: slideOutLeft 1s 0.2s ease both;
@@ -4283,7 +4319,7 @@ body > section {
   -o-animation: slideOutLeft 1s 0.2s ease both;
   animation: slideOutLeft 1s 0.2s ease both;
 }
-/* line 707, sass/_layout.sass */
+/* line 711, sass/_layout.sass */
 #homepage #corporateResponsibility.active .social {
   -webkit-animation: slideInRight 1s 0.2s ease both;
   -moz-animation: slideInRight 1s 0.2s ease both;
@@ -4291,7 +4327,7 @@ body > section {
   -o-animation: slideInRight 1s 0.2s ease both;
   animation: slideInRight 1s 0.2s ease both;
 }
-/* line 710, sass/_layout.sass */
+/* line 714, sass/_layout.sass */
 #homepage #corporateResponsibility.active .environmental {
   -webkit-animation: slideInLeft 1s 0.2s ease both;
   -moz-animation: slideInLeft 1s 0.2s ease both;
@@ -4299,7 +4335,7 @@ body > section {
   -o-animation: slideInLeft 1s 0.2s ease both;
   animation: slideInLeft 1s 0.2s ease both;
 }
-/* line 714, sass/_layout.sass */
+/* line 718, sass/_layout.sass */
 #homepage #shortcutsLinks {
   width: 100%;
   position: relative;
@@ -4315,7 +4351,7 @@ body > section {
 #homepage #shortcutsLinks:after {
   clear: both;
 }
-/* line 721, sass/_layout.sass */
+/* line 725, sass/_layout.sass */
 #homepage #shortcutsLinks main > div {
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;
@@ -4339,25 +4375,25 @@ body > section {
   box-shadow: 0 15px 50px rgba(44, 58, 76, 0.3);
   height: 410px;
 }
-/* line 736, sass/_layout.sass */
+/* line 740, sass/_layout.sass */
 #homepage #shortcutsLinks main > div h4, #homepage #shortcutsLinks main > div span {
   opacity: 0.4;
 }
-/* line 739, sass/_layout.sass */
+/* line 743, sass/_layout.sass */
 #homepage #shortcutsLinks main > div h4 {
   font-size: 60px;
   line-height: 1;
   margin-bottom: 50px;
   color: #2c3a4c;
 }
-/* line 745, sass/_layout.sass */
+/* line 749, sass/_layout.sass */
 #homepage #shortcutsLinks main > div span {
   font-size: 20px;
   line-height: 1.5;
   color: #2c3a4c;
   font-weight: 300;
 }
-/* line 751, sass/_layout.sass */
+/* line 755, sass/_layout.sass */
 #homepage #shortcutsLinks main > div a {
   position: absolute;
   bottom: -50px;
@@ -4374,17 +4410,17 @@ body > section {
   opacity: 0;
   visibility: hidden;
 }
-/* line 767, sass/_layout.sass */
+/* line 771, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.prevLeftSecond {
   z-index: 4;
   left: 6%;
 }
-/* line 771, sass/_layout.sass */
+/* line 775, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.prev {
   z-index: 5;
   left: 26%;
 }
-/* line 775, sass/_layout.sass */
+/* line 779, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.selected {
   -webkit-box-shadow: 0 15px 100px rgba(44, 58, 76, 0.7);
   -moz-box-shadow: 0 15px 100px rgba(44, 58, 76, 0.7);
@@ -4400,26 +4436,26 @@ body > section {
   left: 50%;
   margin-top: 0;
 }
-/* line 785, sass/_layout.sass */
+/* line 789, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.selected h4, #homepage #shortcutsLinks main > div.selected span {
   opacity: 1;
 }
-/* line 788, sass/_layout.sass */
+/* line 792, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.selected a {
   opacity: 1;
   visibility: visible;
 }
-/* line 792, sass/_layout.sass */
+/* line 796, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.next {
   z-index: 5;
   left: 74%;
 }
-/* line 796, sass/_layout.sass */
+/* line 800, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.nextRightSecond {
   z-index: 4;
   left: 94%;
 }
-/* line 801, sass/_layout.sass */
+/* line 805, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.hideLeft {
   left: -16%;
   -moz-transform: scale(0, 0);
@@ -4428,7 +4464,7 @@ body > section {
   transform: scale(0, 0);
   opacity: 0;
 }
-/* line 807, sass/_layout.sass */
+/* line 811, sass/_layout.sass */
 #homepage #shortcutsLinks main > div.hideRight {
   left: 114%;
   -moz-transform: scale(0, 0);
@@ -4437,7 +4473,7 @@ body > section {
   transform: scale(0, 0);
   opacity: 0;
 }
-/* line 814, sass/_layout.sass */
+/* line 818, sass/_layout.sass */
 #homepage #shortcutsLinks button {
   width: 80px;
   height: 50px;
@@ -4452,40 +4488,40 @@ body > section {
   appearance: none;
   border: 0;
 }
-/* line 828, sass/_layout.sass */
+/* line 832, sass/_layout.sass */
 #homepage #shortcutsLinks button#next {
   right: 50%;
   margin-right: -320px;
   background-image: url(img/bt-next.png);
 }
-/* line 833, sass/_layout.sass */
+/* line 837, sass/_layout.sass */
 #homepage #shortcutsLinks button#prev {
   left: 50%;
   margin-left: -320px;
   background-image: url(img/bt-prev.png);
 }
-/* line 838, sass/_layout.sass */
+/* line 842, sass/_layout.sass */
 #homepage #shortcutsLinks {
-  -webkit-animation: bounceOut 1s 0.2s ease both;
-  -moz-animation: bounceOut 1s 0.2s ease both;
-  -ms-animation: bounceOut 1s 0.2s ease both;
-  -o-animation: bounceOut 1s 0.2s ease both;
-  animation: bounceOut 1s 0.2s ease both;
+  -webkit-animation: fadeOutDown 1s 0.2s ease both;
+  -moz-animation: fadeOutDown 1s 0.2s ease both;
+  -ms-animation: fadeOutDown 1s 0.2s ease both;
+  -o-animation: fadeOutDown 1s 0.2s ease both;
+  animation: fadeOutDown 1s 0.2s ease both;
 }
-/* line 841, sass/_layout.sass */
+/* line 845, sass/_layout.sass */
 #homepage #shortcutsLinks.active {
-  -webkit-animation: bounceIn 1s 0.2s ease both;
-  -moz-animation: bounceIn 1s 0.2s ease both;
-  -ms-animation: bounceIn 1s 0.2s ease both;
-  -o-animation: bounceIn 1s 0.2s ease both;
-  animation: bounceIn 1s 0.2s ease both;
+  -webkit-animation: fadeInUp 1s 0.2s ease both;
+  -moz-animation: fadeInUp 1s 0.2s ease both;
+  -ms-animation: fadeInUp 1s 0.2s ease both;
+  -o-animation: fadeInUp 1s 0.2s ease both;
+  animation: fadeInUp 1s 0.2s ease both;
 }
-/* line 844, sass/_layout.sass */
+/* line 848, sass/_layout.sass */
 #homepage #news {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-/* line 848, sass/_layout.sass */
+/* line 852, sass/_layout.sass */
 #homepage #news h3 {
   color: #c1cedf;
   text-transform: uppercase;
@@ -4495,11 +4531,11 @@ body > section {
   display: block;
   padding: 20px;
 }
-/* line 857, sass/_layout.sass */
+/* line 861, sass/_layout.sass */
 #homepage #news article {
-  width: 28.9vw;
+  width: 33.3%;
   padding: 20px;
-  height: 270px;
+  height: 240px;
   display: block;
   position: relative;
   float: left;
@@ -4509,36 +4545,36 @@ body > section {
   -o-animation: fadeOut 1s 0.2s ease both;
   animation: fadeOut 1s 0.2s ease both;
 }
-/* line 868, sass/_layout.sass */
+/* line 872, sass/_layout.sass */
 #homepage #news article.big {
-  width: 57.8vw;
-  height: 540px;
+  width: 66.6%;
+  height: 480px;
 }
-/* line 871, sass/_layout.sass */
+/* line 875, sass/_layout.sass */
 #homepage #news article.big h1 {
   font-size: 40px;
   left: 70px;
   bottom: 70px;
   right: 70px;
 }
-/* line 877, sass/_layout.sass */
+/* line 881, sass/_layout.sass */
 #homepage #news article a {
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: block;
 }
-/* line 883, sass/_layout.sass */
+/* line 887, sass/_layout.sass */
 #homepage #news article a img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 890, sass/_layout.sass */
+/* line 894, sass/_layout.sass */
 #homepage #news article a:hover img {
   -webkit-filter: brightness(60%);
   -moz-filter: brightness(60%);
@@ -4550,7 +4586,7 @@ body > section {
   -webkit-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 895, sass/_layout.sass */
+/* line 899, sass/_layout.sass */
 #homepage #news article h1 {
   display: block;
   position: absolute;
@@ -4562,7 +4598,7 @@ body > section {
   line-height: 1.25;
   color: #fff;
 }
-/* line 906, sass/_layout.sass */
+/* line 910, sass/_layout.sass */
 #homepage #news article .label {
   background: #fff;
   position: absolute;
@@ -4572,7 +4608,7 @@ body > section {
   padding: 15px;
   z-index: 1;
 }
-/* line 915, sass/_layout.sass */
+/* line 919, sass/_layout.sass */
 #homepage #news article .label a {
   font-size: 12px;
   color: #2c3a4c;
@@ -4581,12 +4617,12 @@ body > section {
   margin-bottom: 5px;
   display: block;
 }
-/* line 923, sass/_layout.sass */
+/* line 927, sass/_layout.sass */
 #homepage #news article .label span {
   font-size: 10px;
   line-height: 10px;
 }
-/* line 927, sass/_layout.sass */
+/* line 931, sass/_layout.sass */
 #homepage #news .viewMore {
   display: inline-block;
   position: relative;
@@ -4597,7 +4633,7 @@ body > section {
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 937, sass/_layout.sass */
+/* line 941, sass/_layout.sass */
 #homepage #news .viewMore:after {
   content: "";
   position: absolute;
@@ -4608,16 +4644,25 @@ body > section {
   width: 30px;
   transition: width 0.4s;
 }
-/* line 947, sass/_layout.sass */
+/* line 951, sass/_layout.sass */
 #homepage #news .viewMore:hover, #homepage #news .viewMore:focus, #homepage #news .viewMore:active {
   color: +#146285;
   cursor: pointer;
 }
-/* line 951, sass/_layout.sass */
+/* line 955, sass/_layout.sass */
 #homepage #news .viewMore:hover:after, #homepage #news .viewMore:focus:after, #homepage #news .viewMore:active:after {
   width: 155px;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
+#homepage #news.active article:nth-child(1) {
+  -webkit-animation: fadeIn 1s 0.2s ease both;
+  -moz-animation: fadeIn 1s 0.2s ease both;
+  -ms-animation: fadeIn 1s 0.2s ease both;
+  -o-animation: fadeIn 1s 0.2s ease both;
+  animation: fadeIn 1s 0.2s ease both;
+  animation-delay: 0.5s;
+}
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(2) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4626,7 +4671,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 1s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(3) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4635,7 +4680,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 1.5s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(4) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4644,7 +4689,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 2s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(5) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4653,7 +4698,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 2.5s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(6) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4662,7 +4707,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 3s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(7) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4671,7 +4716,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 3.5s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(8) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4680,7 +4725,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 4s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(9) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4689,7 +4734,7 @@ body > section {
   animation: fadeIn 1s 0.2s ease both;
   animation-delay: 4.5s;
 }
-/* line 958, sass/_layout.sass */
+/* line 962, sass/_layout.sass */
 #homepage #news.active article:nth-child(10) {
   -webkit-animation: fadeIn 1s 0.2s ease both;
   -moz-animation: fadeIn 1s 0.2s ease both;
@@ -4753,7 +4798,11 @@ body > section {
     pointer-events: auto;
     z-index: 99;
   }
-  /* line 45, sass/_media-queries.sass */
+  /* line 44, sass/_media-queries.sass */
+  #homepage.mobile #navWrapper #nav.show {
+    padding-right: 20px;
+  }
+  /* line 47, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav {
     left: 100%;
     right: 0;
@@ -4765,9 +4814,8 @@ body > section {
     height: auto;
     min-height: 100%;
     background: rgba(44, 58, 76, 0.9);
-    padding-right: 20px;
   }
-  /* line 58, sass/_media-queries.sass */
+  /* line 59, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav > li {
     -webkit-animation: fadeOutLeft 1s 0.2s ease both;
     -moz-animation: fadeOutLeft 1s 0.2s ease both;
@@ -4775,16 +4823,16 @@ body > section {
     -o-animation: fadeOutLeft 1s 0.2s ease both;
     animation: fadeOutLeft 1s 0.2s ease both;
   }
-  /* line 61, sass/_media-queries.sass */
+  /* line 62, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav a, #homepage.mobile #navWrapper #nav > li {
     display: block;
   }
-  /* line 64, sass/_media-queries.sass */
+  /* line 65, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show {
     left: 0;
     max-width: 100%;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(1), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(1) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4793,7 +4841,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 0.3s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(2), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(2) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4802,7 +4850,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 0.6s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(3), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(3) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4811,7 +4859,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 0.9s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(4), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(4) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4820,7 +4868,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 1.2s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(5), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(5) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4829,7 +4877,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 1.5s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(6), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(6) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4838,7 +4886,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 1.8s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(7), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(7) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4847,7 +4895,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 2.1s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(8), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(8) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4856,7 +4904,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 2.4s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(9), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(9) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4865,7 +4913,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 2.7s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(10), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(10) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4874,7 +4922,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(11), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(11) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4883,7 +4931,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3.3s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(12), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(12) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4892,7 +4940,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3.6s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(13), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(13) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4901,7 +4949,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3.9s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(14), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(14) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4910,7 +4958,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 4.2s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(15), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(15) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4919,7 +4967,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 4.5s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(16), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(16) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4928,7 +4976,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 4.8s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(17), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(17) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4937,7 +4985,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 5.1s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(18), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(18) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4946,7 +4994,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 5.4s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(19), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(19) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4955,7 +5003,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 5.7s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(20), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(20) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4964,7 +5012,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(21), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(21) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4973,7 +5021,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6.3s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(22), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(22) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4982,7 +5030,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6.6s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(23), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(23) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -4991,7 +5039,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6.9s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(24), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(24) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5000,7 +5048,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 7.2s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(25), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(25) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5009,7 +5057,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 7.5s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(26), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(26) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5018,7 +5066,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 7.8s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(27), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(27) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5027,7 +5075,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 8.1s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(28), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(28) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5036,7 +5084,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 8.4s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(29), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(29) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5045,7 +5093,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 8.7s;
   }
-  /* line 70, sass/_media-queries.sass */
+  /* line 71, sass/_media-queries.sass */
   #homepage.mobile #navWrapper #nav.show li:nth-of-type(30), #homepage.mobile #navWrapper #nav.show nav:nth-of-type(30) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5054,17 +5102,17 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 9s;
   }
-  /* line 75, sass/_media-queries.sass */
+  /* line 76, sass/_media-queries.sass */
   #homepage.mobile #titleWrapper {
     padding-top: 70px;
   }
-  /* line 78, sass/_media-queries.sass */
+  /* line 79, sass/_media-queries.sass */
   #homepage.mobile header {
     height: 460px;
     max-height: 460px;
     min-height: auto;
   }
-  /* line 83, sass/_media-queries.sass */
+  /* line 84, sass/_media-queries.sass */
   #homepage.mobile header h1, #homepage.mobile header h2 {
     flex: 12 1 100%;
     padding: 0px;
@@ -5072,18 +5120,18 @@ body > section {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 86, sass/_media-queries.sass */
+  /* line 87, sass/_media-queries.sass */
   #homepage.mobile header h1 {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 10px;
   }
-  /* line 90, sass/_media-queries.sass */
+  /* line 91, sass/_media-queries.sass */
   #homepage.mobile header h2 {
     font-size: 20px;
     line-height: 24px;
   }
-  /* line 96, sass/_media-queries.sass */
+  /* line 97, sass/_media-queries.sass */
   #homepage.mobile #headerComplement section #blueBox {
     padding: 10px 0;
     width: auto;
@@ -5092,13 +5140,13 @@ body > section {
     top: -40px;
     width: 210px;
   }
-  /* line 104, sass/_media-queries.sass */
+  /* line 105, sass/_media-queries.sass */
   #homepage.mobile #headerComplement section #blueBox a {
     display: block;
     font-size: 18px;
     padding: 10px 20px;
   }
-  /* line 109, sass/_media-queries.sass */
+  /* line 110, sass/_media-queries.sass */
   #homepage.mobile #headerComplement section #venturesLinks {
     flex: 12 1 100%;
     padding: 0px;
@@ -5108,7 +5156,7 @@ body > section {
     width: auto;
     padding-top: 140px;
   }
-  /* line 115, sass/_media-queries.sass */
+  /* line 116, sass/_media-queries.sass */
   #homepage.mobile #headerComplement section #venturesLinks nav a {
     flex: 4 1 33.33333%;
     padding: 0px;
@@ -5118,12 +5166,12 @@ body > section {
     padding: 15px 0;
     font-size: 16px;
   }
-  /* line 120, sass/_media-queries.sass */
+  /* line 121, sass/_media-queries.sass */
   #homepage.mobile #headerComplement section #venturesLinks h3 {
     padding-bottom: 20px;
     margin-bottom: 10px;
   }
-  /* line 128, sass/_media-queries.sass */
+  /* line 129, sass/_media-queries.sass */
   #homepage.mobile #solutionsByIndustry .row h3 {
     font-size: 30px;
     line-height: 30px;
@@ -5134,7 +5182,7 @@ body > section {
     flex-shrink: 1;
     padding-bottom: 10px;
   }
-  /* line 134, sass/_media-queries.sass */
+  /* line 135, sass/_media-queries.sass */
   #homepage.mobile #solutionsByIndustry .row .industryBox {
     flex: 12 1 98%;
     padding: 10px;
@@ -5143,7 +5191,7 @@ body > section {
     flex-shrink: 1;
     height: 80px;
   }
-  /* line 138, sass/_media-queries.sass */
+  /* line 139, sass/_media-queries.sass */
   #homepage.mobile #solutionsByIndustry .row .industryBox span {
     top: 50%;
     -moz-transform: translateY(-50%);
@@ -5158,7 +5206,7 @@ body > section {
     line-height: 20px;
     text-align: left;
   }
-  /* line 149, sass/_media-queries.sass */
+  /* line 150, sass/_media-queries.sass */
   #homepage.mobile #solutionsByIndustry .row .industryBox img {
     top: 50%;
     opacity: 1;
@@ -5172,17 +5220,17 @@ body > section {
     margin-left: 0px;
     left: 30px;
   }
-  /* line 161, sass/_media-queries.sass */
+  /* line 162, sass/_media-queries.sass */
   #homepage.mobile #corporateResponsibility {
     height: auto;
     padding-top: 0;
     margin: 0;
   }
-  /* line 166, sass/_media-queries.sass */
+  /* line 167, sass/_media-queries.sass */
   #homepage.mobile #corporateResponsibility, #homepage.mobile #corporateResponsibility .wrapper {
     height: auto;
   }
-  /* line 169, sass/_media-queries.sass */
+  /* line 170, sass/_media-queries.sass */
   #homepage.mobile #corporateResponsibility h3, #homepage.mobile #corporateResponsibility .responsibilityType, #homepage.mobile #corporateResponsibility .quote {
     position: relative;
     top: auto;
@@ -5193,13 +5241,13 @@ body > section {
     width: 100%;
     margin-bottom: 20px;
   }
-  /* line 179, sass/_media-queries.sass */
+  /* line 180, sass/_media-queries.sass */
   #homepage.mobile #corporateResponsibility h3 {
     font-size: 26px;
     line-height: 30px;
     text-align: center;
   }
-  /* line 184, sass/_media-queries.sass */
+  /* line 185, sass/_media-queries.sass */
   #homepage.mobile #corporateResponsibility .responsibilityType {
     width: 100%;
     font-size: 24px;
@@ -5207,38 +5255,38 @@ body > section {
     padding: 120px 40px 0 40px;
     text-align: center;
   }
-  /* line 191, sass/_media-queries.sass */
+  /* line 192, sass/_media-queries.sass */
   #homepage.mobile #corporateResponsibility .quote {
     font-size: 20px;
     text-align: center;
   }
-  /* line 195, sass/_media-queries.sass */
+  /* line 196, sass/_media-queries.sass */
   #homepage.mobile #corporateResponsibility .quote b {
     padding-top: 10px;
     font-size: 12px;
   }
-  /* line 200, sass/_media-queries.sass */
+  /* line 201, sass/_media-queries.sass */
   #homepage.mobile #shortcutsLinks {
     height: 540px;
   }
-  /* line 204, sass/_media-queries.sass */
+  /* line 205, sass/_media-queries.sass */
   #homepage.mobile #shortcutsLinks main > div {
     width: 240px;
     padding: 40px 20px 20px 20px;
     margin-left: -120px;
     height: 300px;
   }
-  /* line 210, sass/_media-queries.sass */
+  /* line 211, sass/_media-queries.sass */
   #homepage.mobile #shortcutsLinks main > div h4 {
     font-size: 40px;
     margin-bottom: 20px;
     padding: 0 10px;
   }
-  /* line 215, sass/_media-queries.sass */
+  /* line 216, sass/_media-queries.sass */
   #homepage.mobile #shortcutsLinks main > div span {
     font-size: 16px;
   }
-  /* line 218, sass/_media-queries.sass */
+  /* line 219, sass/_media-queries.sass */
   #homepage.mobile #shortcutsLinks main > div a {
     height: 50px;
     font-size: 14px;
@@ -5246,33 +5294,33 @@ body > section {
     bottom: -30px;
     line-height: 50px;
   }
-  /* line 225, sass/_media-queries.sass */
+  /* line 226, sass/_media-queries.sass */
   #homepage.mobile #shortcutsLinks #prev {
     margin-left: -120px;
   }
-  /* line 228, sass/_media-queries.sass */
+  /* line 229, sass/_media-queries.sass */
   #homepage.mobile #shortcutsLinks #next {
     margin-right: -120px;
   }
-  /* line 232, sass/_media-queries.sass */
+  /* line 233, sass/_media-queries.sass */
   #homepage.mobile #news {
     padding-top: 10px;
   }
-  /* line 235, sass/_media-queries.sass */
+  /* line 236, sass/_media-queries.sass */
   #homepage.mobile #news h3 {
     padding: 0;
     margin-bottom: 20px;
     font-size: 45px;
     line-height: 45px;
   }
-  /* line 241, sass/_media-queries.sass */
+  /* line 242, sass/_media-queries.sass */
   #homepage.mobile #news article {
     padding: 0;
     width: 100%;
     margin-bottom: 20px;
-    height: 160px;
+    height: 140px;
   }
-  /* line 247, sass/_media-queries.sass */
+  /* line 248, sass/_media-queries.sass */
   #homepage.mobile #news article h1 {
     left: 20px;
     bottom: 20px;
@@ -5280,25 +5328,25 @@ body > section {
     font-size: 14px;
     line-height: 1.2;
   }
-  /* line 255, sass/_media-queries.sass */
+  /* line 256, sass/_media-queries.sass */
   #homepage.mobile #news article.big {
-    height: 320px;
+    height: 200px;
   }
-  /* line 258, sass/_media-queries.sass */
+  /* line 259, sass/_media-queries.sass */
   #homepage.mobile #news article.big h1 {
     font-size: 18px;
   }
-  /* line 261, sass/_media-queries.sass */
+  /* line 262, sass/_media-queries.sass */
   #homepage.mobile #news article .label {
     padding: 10px;
-    top: 10px;
-    right: 10px;
+    top: -10px;
+    right: -10px;
   }
-  /* line 266, sass/_media-queries.sass */
+  /* line 267, sass/_media-queries.sass */
   #homepage.mobile #news article .label a {
     margin: 0;
   }
-  /* line 271, sass/_media-queries.sass */
+  /* line 272, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #contactFooter {
     flex: 12 1 100%;
     padding: 0px;
@@ -5306,7 +5354,7 @@ body > section {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 274, sass/_media-queries.sass */
+  /* line 275, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #contactFooter div {
     padding: 0 30px;
   }
@@ -5319,13 +5367,13 @@ body > section {
   #homepage.mobile #footer #sitemapWrapper #contactFooter div:after {
     clear: both;
   }
-  /* line 277, sass/_media-queries.sass */
+  /* line 278, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #contactFooter div span {
     font-size: 14px;
     width: 100%;
     display: block;
   }
-  /* line 282, sass/_media-queries.sass */
+  /* line 283, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #sitemap {
     flex: 12 1 100%;
     padding: 0px;
@@ -5333,7 +5381,7 @@ body > section {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 285, sass/_media-queries.sass */
+  /* line 286, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #sitemap nav {
     flex: 12 1 100%;
     padding: 0px;
@@ -5341,80 +5389,80 @@ body > section {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 287, sass/_media-queries.sass */
+  /* line 288, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #sitemap nav a {
     display: block;
     width: 100%;
     padding: 10px 0;
   }
-  /* line 293, sass/_media-queries.sass */
+  /* line 294, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #sitemap nav.ventures a {
     width: 50%;
     font-size: 14px;
     float: left;
   }
-  /* line 298, sass/_media-queries.sass */
+  /* line 299, sass/_media-queries.sass */
   #homepage.mobile #footer #sitemapWrapper #sitemap nav > a:first-child, #homepage.mobile #footer #sitemapWrapper #sitemap nav > a:last-child {
     width: 100%;
   }
-  /* line 301, sass/_media-queries.sass */
+  /* line 302, sass/_media-queries.sass */
   #homepage.mobile #footer h4 {
     font-size: 24px;
     margin-top: 40px;
   }
-  /* line 305, sass/_media-queries.sass */
+  /* line 306, sass/_media-queries.sass */
   #homepage.mobile #footer #partnersFooter {
     padding: 20px 0;
   }
-  /* line 307, sass/_media-queries.sass */
+  /* line 308, sass/_media-queries.sass */
   #homepage.mobile #footer #partnersFooter a {
     width: 47%;
     padding: 10px 0;
   }
-  /* line 311, sass/_media-queries.sass */
+  /* line 312, sass/_media-queries.sass */
   #homepage.mobile #footer #partnersFooter a img {
     height: 40px;
     display: block;
     margin: 0 auto;
   }
-  /* line 316, sass/_media-queries.sass */
+  /* line 317, sass/_media-queries.sass */
   #homepage.mobile #footer #partnersFooter a:nth-of-type(5), #homepage.mobile #footer #partnersFooter a:nth-of-type(6), #homepage.mobile #footer #partnersFooter a:nth-of-type(7) {
     width: 100%;
   }
-  /* line 318, sass/_media-queries.sass */
+  /* line 319, sass/_media-queries.sass */
   #homepage.mobile #footer #partnersFooter a:nth-of-type(5) img, #homepage.mobile #footer #partnersFooter a:nth-of-type(6) img, #homepage.mobile #footer #partnersFooter a:nth-of-type(7) img {
     height: 50px;
   }
 }
 @media (min-width: 761px) and (max-width: 1024px) {
-  /* line 325, sass/_media-queries.sass */
+  /* line 326, sass/_media-queries.sass */
   #homepage.tablet #contactHeader {
     display: none;
   }
-  /* line 328, sass/_media-queries.sass */
+  /* line 329, sass/_media-queries.sass */
   #homepage.tablet #contactHeader #tagline {
     display: none;
   }
-  /* line 331, sass/_media-queries.sass */
+  /* line 332, sass/_media-queries.sass */
   #homepage.tablet #contactHeader #contactInfo {
     left: 40px;
     text-align: left;
   }
-  /* line 335, sass/_media-queries.sass */
+  /* line 336, sass/_media-queries.sass */
   #homepage.tablet #contactHeader #contactInfo span {
     margin-right: 30px;
     margin-left: 0;
   }
-  /* line 340, sass/_media-queries.sass */
+  /* line 341, sass/_media-queries.sass */
   #homepage.tablet #lakebaLogo {
     left: 20px;
     z-index: 99;
   }
-  /* line 344, sass/_media-queries.sass */
+  /* line 345, sass/_media-queries.sass */
   #homepage.tablet #navWrapper {
     padding-top: 20px;
   }
-  /* line 347, sass/_media-queries.sass */
+  /* line 348, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #navMobileButton {
     display: block;
     visibility: visible;
@@ -5422,6 +5470,10 @@ body > section {
     z-index: 99;
   }
   /* line 354, sass/_media-queries.sass */
+  #homepage.tablet #navWrapper #nav.show {
+    padding-right: 20px;
+  }
+  /* line 357, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav {
     left: 100%;
     right: 0;
@@ -5433,9 +5485,8 @@ body > section {
     height: auto;
     min-height: 100%;
     background: rgba(44, 58, 76, 0.9);
-    padding-right: 20px;
   }
-  /* line 367, sass/_media-queries.sass */
+  /* line 370, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav > li {
     -webkit-animation: fadeOutLeft 1s 0.2s ease both;
     -moz-animation: fadeOutLeft 1s 0.2s ease both;
@@ -5443,16 +5494,35 @@ body > section {
     -o-animation: fadeOutLeft 1s 0.2s ease both;
     animation: fadeOutLeft 1s 0.2s ease both;
   }
-  /* line 370, sass/_media-queries.sass */
+  /* line 373, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav a, #homepage.tablet #navWrapper #nav > li {
     display: block;
   }
-  /* line 373, sass/_media-queries.sass */
+  /* line 376, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show {
-    left: 0;
+    left: auto;
     max-width: 100%;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 381, sass/_media-queries.sass */
+  #homepage.tablet #navWrapper #nav.show .submenu ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* line 386, sass/_media-queries.sass */
+  #homepage.tablet #navWrapper #nav.show .submenu ul nav span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /* line 390, sass/_media-queries.sass */
+  #homepage.tablet #navWrapper #nav.show .submenu ul nav a {
+    font-size: 16px;
+  }
+  /* line 394, sass/_media-queries.sass */
+  #homepage.tablet #navWrapper #nav.show li a {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(1), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(1) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5461,7 +5531,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 0.3s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(2), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(2) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5470,7 +5540,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 0.6s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(3), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(3) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5479,7 +5549,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 0.9s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(4), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(4) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5488,7 +5558,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 1.2s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(5), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(5) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5497,7 +5567,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 1.5s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(6), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(6) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5506,7 +5576,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 1.8s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(7), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(7) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5515,7 +5585,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 2.1s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(8), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(8) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5524,7 +5594,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 2.4s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(9), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(9) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5533,7 +5603,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 2.7s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(10), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(10) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5542,7 +5612,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(11), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(11) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5551,7 +5621,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3.3s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(12), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(12) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5560,7 +5630,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3.6s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(13), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(13) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5569,7 +5639,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 3.9s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(14), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(14) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5578,7 +5648,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 4.2s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(15), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(15) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5587,7 +5657,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 4.5s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(16), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(16) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5596,7 +5666,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 4.8s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(17), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(17) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5605,7 +5675,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 5.1s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(18), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(18) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5614,7 +5684,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 5.4s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(19), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(19) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5623,7 +5693,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 5.7s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(20), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(20) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5632,7 +5702,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(21), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(21) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5641,7 +5711,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6.3s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(22), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(22) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5650,7 +5720,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6.6s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(23), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(23) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5659,7 +5729,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 6.9s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(24), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(24) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5668,7 +5738,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 7.2s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(25), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(25) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5677,7 +5747,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 7.5s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(26), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(26) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5686,7 +5756,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 7.8s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(27), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(27) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5695,7 +5765,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 8.1s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(28), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(28) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5704,7 +5774,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 8.4s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(29), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(29) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5713,7 +5783,7 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 8.7s;
   }
-  /* line 379, sass/_media-queries.sass */
+  /* line 400, sass/_media-queries.sass */
   #homepage.tablet #navWrapper #nav.show li:nth-of-type(30), #homepage.tablet #navWrapper #nav.show nav:nth-of-type(30) {
     -webkit-animation: fadeInRight 1s 0.2s ease both;
     -moz-animation: fadeInRight 1s 0.2s ease both;
@@ -5722,23 +5792,23 @@ body > section {
     animation: fadeInRight 1s 0.2s ease both;
     animation-delay: 9s;
   }
-  /* line 383, sass/_media-queries.sass */
+  /* line 404, sass/_media-queries.sass */
   #homepage.tablet #titleWrapper {
     padding-top: 120px;
   }
-  /* line 386, sass/_media-queries.sass */
+  /* line 407, sass/_media-queries.sass */
   #homepage.tablet header {
     height: 500px;
   }
-  /* line 389, sass/_media-queries.sass */
+  /* line 410, sass/_media-queries.sass */
   #homepage.tablet header h1 {
     font-size: 50px;
   }
-  /* line 391, sass/_media-queries.sass */
+  /* line 412, sass/_media-queries.sass */
   #homepage.tablet header h2 {
     font-size: 30px;
   }
-  /* line 394, sass/_media-queries.sass */
+  /* line 415, sass/_media-queries.sass */
   #homepage.tablet header h1, #homepage.tablet header h2 {
     line-height: 1.2;
     flex: 9 1 75%;
@@ -5747,7 +5817,7 @@ body > section {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 400, sass/_media-queries.sass */
+  /* line 421, sass/_media-queries.sass */
   #homepage.tablet #headerComplement section #blueBox {
     padding: 20px 0;
     width: auto;
@@ -5755,14 +5825,14 @@ body > section {
     right: 0;
     top: -70px;
   }
-  /* line 407, sass/_media-queries.sass */
+  /* line 428, sass/_media-queries.sass */
   #homepage.tablet #headerComplement section #blueBox a {
     text-align: center;
     display: inline-block;
     width: auto;
     font-size: 22px;
   }
-  /* line 413, sass/_media-queries.sass */
+  /* line 434, sass/_media-queries.sass */
   #homepage.tablet #headerComplement section #venturesLinks {
     flex: 12 1 100%;
     padding: 0px;
@@ -5772,15 +5842,20 @@ body > section {
     width: auto;
     padding-top: 60px;
   }
-  /* line 419, sass/_media-queries.sass */
+  /* line 440, sass/_media-queries.sass */
   #homepage.tablet #headerComplement section #venturesLinks nav a {
     padding: 20px;
   }
-  /* line 425, sass/_media-queries.sass */
+  /* line 446, sass/_media-queries.sass */
+  #homepage.tablet #solutionsByIndustry h3 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  /* line 450, sass/_media-queries.sass */
   #homepage.tablet #solutionsByIndustry .industryBox {
     height: 220px;
   }
-  /* line 428, sass/_media-queries.sass */
+  /* line 452, sass/_media-queries.sass */
   #homepage.tablet #solutionsByIndustry .industryBox span {
     top: 140px;
     left: 20px;
@@ -5789,7 +5864,7 @@ body > section {
     font-size: 14px;
     line-height: 18px;
   }
-  /* line 436, sass/_media-queries.sass */
+  /* line 460, sass/_media-queries.sass */
   #homepage.tablet #solutionsByIndustry .industryBox img {
     top: 40%;
     opacity: 1;
@@ -5799,58 +5874,58 @@ body > section {
     -o-filter: saturate(100%);
     filter: saturate(100%);
   }
-  /* line 445, sass/_media-queries.sass */
+  /* line 469, sass/_media-queries.sass */
   #homepage.tablet #corporateResponsibility, #homepage.tablet #corporateResponsibility .wrapper {
     height: 540px;
   }
-  /* line 448, sass/_media-queries.sass */
+  /* line 472, sass/_media-queries.sass */
   #homepage.tablet #corporateResponsibility h3 {
     top: 0;
     left: 40px;
     right: 40px;
     text-align: center;
   }
-  /* line 454, sass/_media-queries.sass */
+  /* line 478, sass/_media-queries.sass */
   #homepage.tablet #corporateResponsibility .responsibilityType {
     width: 48%;
     top: 100px;
     font-size: 34px;
     height: 300px;
   }
-  /* line 460, sass/_media-queries.sass */
+  /* line 484, sass/_media-queries.sass */
   #homepage.tablet #corporateResponsibility .responsibilityType.social {
     padding-left: 50px;
     padding-top: 180px;
   }
-  /* line 464, sass/_media-queries.sass */
+  /* line 488, sass/_media-queries.sass */
   #homepage.tablet #corporateResponsibility .responsibilityType.environmental {
     padding-right: 50px;
     padding-top: 180px;
   }
-  /* line 469, sass/_media-queries.sass */
+  /* line 493, sass/_media-queries.sass */
   #homepage.tablet #news h3 {
     margin: 0;
   }
-  /* line 472, sass/_media-queries.sass */
+  /* line 496, sass/_media-queries.sass */
   #homepage.tablet #news article {
     width: 50%;
     height: auto;
   }
-  /* line 476, sass/_media-queries.sass */
+  /* line 500, sass/_media-queries.sass */
   #homepage.tablet #news article.big {
     width: 100%;
   }
-  /* line 479, sass/_media-queries.sass */
+  /* line 503, sass/_media-queries.sass */
   #homepage.tablet #news article .label {
     padding: 10px;
     top: 10px;
     right: 10px;
   }
-  /* line 484, sass/_media-queries.sass */
+  /* line 508, sass/_media-queries.sass */
   #homepage.tablet #news article .label a {
     margin: 0;
   }
-  /* line 489, sass/_media-queries.sass */
+  /* line 513, sass/_media-queries.sass */
   #homepage.tablet #footer #sitemapWrapper #contactFooter {
     flex: 12 1 100%;
     padding: 0px;
@@ -5858,7 +5933,7 @@ body > section {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 492, sass/_media-queries.sass */
+  /* line 516, sass/_media-queries.sass */
   #homepage.tablet #footer #sitemapWrapper #contactFooter div {
     padding: 0 30px;
   }
@@ -5871,18 +5946,18 @@ body > section {
   #homepage.tablet #footer #sitemapWrapper #contactFooter div:after {
     clear: both;
   }
-  /* line 495, sass/_media-queries.sass */
+  /* line 519, sass/_media-queries.sass */
   #homepage.tablet #footer #sitemapWrapper #contactFooter div span {
     font-size: 14px;
     width: 25%;
     display: block;
     float: left;
   }
-  /* line 501, sass/_media-queries.sass */
+  /* line 525, sass/_media-queries.sass */
   #homepage.tablet #footer #sitemapWrapper #contactFooter div span:first-child {
     width: 50%;
   }
-  /* line 503, sass/_media-queries.sass */
+  /* line 527, sass/_media-queries.sass */
   #homepage.tablet #footer #sitemapWrapper #sitemap {
     flex: 12 1 100%;
     padding: 0px;
@@ -5890,9 +5965,72 @@ body > section {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 506, sass/_media-queries.sass */
+  /* line 530, sass/_media-queries.sass */
   #homepage.tablet #footer #sitemapWrapper #sitemap nav {
     padding-left: 0;
     padding-right: 20px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 538, sass/_media-queries.sass */
+  #homepage.small #headerComplement section #blueBox {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 280px;
+  }
+  /* line 543, sass/_media-queries.sass */
+  #homepage.small #headerComplement section #blueBox a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 24px;
+  }
+  /* line 548, sass/_media-queries.sass */
+  #homepage.small #headerComplement section #venturesLinks {
+    padding-left: 320px;
+  }
+  /* line 552, sass/_media-queries.sass */
+  #homepage.small #headerComplement section #venturesLinks nav a {
+    padding: 15px 20px;
+    opacity: 0.6;
+  }
+  /* line 557, sass/_media-queries.sass */
+  #homepage.small #navWrapper #nav {
+    right: 20px;
+  }
+  /* line 561, sass/_media-queries.sass */
+  #homepage.small #navWrapper #nav > li > a {
+    padding: 20px;
+  }
+  /* line 565, sass/_media-queries.sass */
+  #homepage.small #news article {
+    height: 195px;
+  }
+  /* line 568, sass/_media-queries.sass */
+  #homepage.small #news article.big {
+    height: 390px;
+  }
+  /* line 571, sass/_media-queries.sass */
+  #homepage.small #news article.big h1 {
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    font-size: 30px;
+  }
+  /* line 578, sass/_media-queries.sass */
+  #homepage.small #news article h1 {
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    font-size: 16px;
+  }
+  /* line 584, sass/_media-queries.sass */
+  #homepage.small #news article .label {
+    padding: 10px;
+    top: 30px;
+    right: 30px;
+  }
+  /* line 589, sass/_media-queries.sass */
+  #homepage.small #news article .label a {
+    margin: 0;
   }
 }
