@@ -4,9 +4,6 @@
 
 body
 	background-color: $whiteGray
-	background-image: url(img/lakeba-logo-bg.jpg)
-	background-position: 590px 460px
-	background-repeat: no-repeat
 	overflow-x: hidden
 
 
@@ -23,12 +20,35 @@ body
 	background-repeat: no-repeat
 	+bgCover
 
+	#titleWrapper
+		z-index: 1
+		padding-top: 200px
+
+	.featureImg
+		width: 100%
+		height: 100%
+		overflow: hidden
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 0
+
+		img
+			position: relative
+			left: 50%
+			+translateX(-50%)
+			min-height: 100%
+			min-width: 100%
+			display: block
+
 
 #contactHeader
 	background: rgba(0,0,0,0.4)
 	position: relative
 	display: block
 	height: 30px
+	z-index: 1
 
 
 	#tagline
@@ -93,7 +113,11 @@ body
 		text-align: right
 		position: absolute
 		left: 180px
-		right: 40px
+		right: 0px
+
+		.disable
+			pointer-events: none
+			cursor: default
 
 		& > li
 			display: inline-block
@@ -170,6 +194,7 @@ body
 					a
 						padding: 5px 10px
 						margin-left: 40px
+						margin-right: 10px
 
 						&:after
 							content: ' '
@@ -455,9 +480,40 @@ body
 				margin: 0 5px
 
 
+main.content
+	padding-top: 80px
+	padding-bottom: 80px
 
+	& > .subtitle
+		display: block
+		position: relative
+		padding-bottom: 80px
+		margin-bottom: 80px
 
+		&:before
+			position: absolute
+			bottom: 4px
+			left: 0
+			height: 4px
+			width: 80px
+			background: $grayDark
+			display: block
+			content: ' '
 
+		b
+			position: relative
+			display: inline-block
+			color: $whitePure
+
+			&:before
+				position: absolute
+				left: -10px
+				top: -10px
+				bottom: -10px
+				right: -10px
+				background: $red
+				content: ' '
+				z-index: -1
 
 
 
@@ -470,9 +526,12 @@ body
 // ------------------------------------------------------------------
 
 #homepage
-	header
+	background-image: url(img/lakeba-logo-bg.jpg)
+	background-position: 590px 460px
+	background-repeat: no-repeat
+
+	#header
 		height: 620px
-		background-image: url(img/header-home.jpg)
 
 		h1, h2
 			color: $whitePure
@@ -962,6 +1021,202 @@ body
 					&:nth-child(#{$i})
 						+animate(fadeIn)
 						animation-delay: $i * 0.5s
+
+
+
+// ------------------------------------------------------------------
+// Success Stories
+// ------------------------------------------------------------------
+
+#testimonialsWrapper
+	display: block
+	position: relative
+	+clearfix
+
+	section
+	display: block
+	position: relative
+	+clearfix
+
+	.testimonial
+		display: block
+		position: relative
+
+		& > span, & > div
+			display: block
+			+clearfix
+
+		.venture
+			position: absolute
+			top: 0
+			left: 0
+			width: 140px
+			text-align: right
+			font-size: 24px
+			font-weight: 600
+			line-height: 1.2
+
+		.content
+			position: relative
+			margin-left: 180px
+			margin-right: 70px
+			margin-bottom: 170px
+			padding: 60px 80px 170px 80px
+			+bgCover
+			background-color: $grayDarkBlue
+			overflow: hidden
+
+
+			p
+				color: $whitePure
+				font-size: 16px
+				line-height: 30px
+				font-weight: 600
+
+		.avatar
+			position: absolute
+			left: 40px
+			bottom: 40px
+			height: 260px
+			background: $whitePure
+			width: 730px
+			+box-shadow(0, 0px, 50px, rgba($grayDarkBlue, 0.6))
+
+			img
+				width: 260px
+				height: 260px
+				display: block
+				float: left
+
+			div
+				float: left
+				display: block
+				width: 470px
+				padding: 50px 20px 50px 60px
+
+				h3
+					font-size: 60px
+					line-height: 0.9
+					font-weight: 600
+					margin-bottom: 20px
+
+				span
+					display: block
+					font-weight: 300
+					font-size: 24px
+					line-height: 1
+
+	#testimonialsNav
+		position: absolute
+		right: 0
+		bottom: 40px
+		width: 130px
+
+		#next, #prev
+			display: block
+			width: 130px
+			height: 130px
+			display: block
+			margin-top: 2px
+			cursor: pointer
+
+			&:hover
+				+scale(1.1)
+
+		#prev
+			background: $whitePure url(img/testimonial/prev.png) center center no-repeat
+
+		#next
+			background: $whitePure url(img/testimonial/next.png) center center no-repeat
+
+
+
+	.slick-slider
+		position: relative
+		display: block
+		box-sizing: border-box
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+		-webkit-touch-callout: none
+		-khtml-user-select: none
+		-ms-touch-action: pan-y
+		touch-action: pan-y
+		-webkit-tap-highlight-color: transparent
+
+	.slick-list
+		position: relative
+		display: block
+		overflow: hidden
+		margin: 0
+		padding: 0
+		&:focus
+			outline: none
+		&.dragging
+			cursor: pointer
+			cursor: hand
+
+	.slick-slider
+		.slick-track, .slick-list
+			-webkit-transform: translate3d(0, 0, 0)
+			-moz-transform: translate3d(0, 0, 0)
+			-ms-transform: translate3d(0, 0, 0)
+			-o-transform: translate3d(0, 0, 0)
+			transform: translate3d(0, 0, 0)
+
+	.slick-track
+		position: relative
+		top: 0
+		left: 0
+		display: block
+		margin-left: auto
+		margin-right: auto
+		&:before
+			display: table
+			content: ''
+		&:after
+			display: table
+			content: ''
+			clear: both
+
+	.slick-loading .slick-track
+		visibility: hidden
+
+	.slick-slide
+		display: none
+		float: left
+		height: 100%
+		min-height: 1px
+
+	[dir='rtl'] .slick-slide
+		float: right
+
+	.slick-slide
+		img
+			display: block
+		&.slick-loading img
+			display: none
+		&.dragging img
+			pointer-events: none
+
+	.slick-initialized .slick-slide
+		display: block
+
+	.slick-loading .slick-slide
+		visibility: hidden
+
+	.slick-vertical .slick-slide
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+	.slick-arrow.slick-hidden
+		display: none
+
+
+
+
 
 // ------------------------------------------------------------------
 // TEMP
