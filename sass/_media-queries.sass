@@ -1,4 +1,22 @@
 +mobile
+
+	#homepage.mobile
+		#header
+			height: 460px
+			max-height: 460px
+			min-height: auto
+
+			h1, h2
+				+col(12,0,0,0)
+
+			h1
+				font-size: 40px 
+				line-height: 40px
+				margin-bottom: 10px
+			h2
+				font-size: 20px
+				line-height: 24px
+
 	.mobile
 
 		#contactHeader
@@ -22,7 +40,6 @@
 					margin-right: 20px
 					margin-left: 0
 
-			
 
 		.wrapper
 			padding-left: 20px
@@ -73,24 +90,28 @@
 								animation-delay: $i * 0.3s
 
 
-		#titleWrapper
-			padding-top: 70px
-
-		header
-			height: 460px
-			max-height: 460px
+		#header
+			height: 220px
+			max-height: 220px
 			min-height: auto
 
 			h1, h2
 				+col(12,0,0,0)
 
 			h1
-				font-size: 40px 
-				line-height: 40px
-				margin-bottom: 10px
-			h2
-				font-size: 20px
-				line-height: 24px
+				font-size: 30px 
+				line-height: 30px
+				margin-bottom: 0px
+
+			.featureImg
+				img
+					min-height: auto
+					min-width: auto
+					height: 100%
+
+
+			#titleWrapper
+				padding-top: 70px
 
 		#headerComplement
 			section
@@ -320,6 +341,16 @@
 							height: 50px
 
 
+		main.content
+			padding-top: 40px
+			padding-bottom: 20px
+
+			& > .subtitle
+				display: block
+				position: relative
+				padding-bottom: 30px
+				margin-bottom: 30px
+				font-size: 20px
 +tablet
 	.tablet
 

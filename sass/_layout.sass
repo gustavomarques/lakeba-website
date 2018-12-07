@@ -281,7 +281,15 @@ body
 							a
 								margin-right: 20px
 
-
+	&.sticky
+		position: fixed
+		background: rgba($grayDarkBlue, 0.7)
+		top: 0
+		right: 0
+		left: 0
+		padding-top: 10px
+		padding-bottom: 10px
+		height: 80px
 
 
 	#navMobileButton
@@ -1028,15 +1036,16 @@ main.content
 // Success Stories
 // ------------------------------------------------------------------
 
+
 #testimonialsWrapper
 	display: block
 	position: relative
 	+clearfix
 
 	section
-	display: block
-	position: relative
-	+clearfix
+		display: block
+		position: relative
+		+clearfix
 
 	.testimonial
 		display: block
@@ -1056,6 +1065,16 @@ main.content
 			font-weight: 600
 			line-height: 1.2
 
+			+mobile
+				width: 100%
+				top: 0
+				font-size: 20px
+
+			+tablet
+				width: 100%
+				top: 0
+				font-size: 20px
+
 		.content
 			position: relative
 			margin-left: 180px
@@ -1066,12 +1085,28 @@ main.content
 			background-color: $grayDarkBlue
 			overflow: hidden
 
+			+mobile
+				margin: 50px 0 100px 0
+				padding: 40px 20px 120px 20px
+
+			+tablet
+				margin: 50px 0 100px 0
+				padding: 40px 60px 120px 60px
+
 
 			p
 				color: $whitePure
 				font-size: 16px
 				line-height: 30px
 				font-weight: 600
+
+				+mobile
+					font-size: 14px
+					line-height: 24px
+
+				+tablet
+					font-size: 14px
+					line-height: 24px
 
 		.avatar
 			position: absolute
@@ -1080,7 +1115,7 @@ main.content
 			height: 260px
 			background: $whitePure
 			width: 730px
-			+box-shadow(0, 0px, 50px, rgba($grayDarkBlue, 0.6))
+			+box-shadow(0, 0px, 30px, rgba($grayDarkBlue, 0.6))
 
 			img
 				width: 260px
@@ -1106,6 +1141,45 @@ main.content
 					font-size: 24px
 					line-height: 1
 
+			+mobile
+				left: auto
+				right: 20px
+				height: 80px
+				width: 240px
+
+				img
+					width: 80px
+					height: 80px
+
+				div
+					padding: 20px 20px
+					width: 160px
+
+					h3
+						font-size: 16px
+						margin-bottom: 5px
+
+					span
+						font-size: 10px
+			+tablet
+				height: 130px
+				width: 500px
+
+				img
+					width: 130px
+					height: 130px
+
+				div
+					padding: 30px
+					width: 370px
+
+					h3
+						font-size: 30px
+
+					span
+						font-size: 18px
+
+
 	#testimonialsNav
 		position: absolute
 		right: 0
@@ -1114,11 +1188,12 @@ main.content
 
 		#next, #prev
 			display: block
-			width: 130px
-			height: 130px
+			width: 129px
+			height: 129px
 			display: block
 			margin-top: 2px
 			cursor: pointer
+
 
 			&:hover
 				+scale(1.1)
@@ -1129,6 +1204,26 @@ main.content
 		#next
 			background: $whitePure url(img/testimonial/next.png) center center no-repeat
 
+		+mobile
+			width: 210px
+			bottom: 121px
+			right: 20px
+			text-align: right
+
+			#next, #prev
+				display: inline-block
+				width: 60px
+				height: 60px
+				background-size: 30px 18px
+
+		+tablet
+			width: 100px
+			right: -10px
+
+			#next, #prev
+				width: 100px
+				height: 64px
+				background-size: 30px 18px
 
 
 	.slick-slider
