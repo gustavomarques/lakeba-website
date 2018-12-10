@@ -145,44 +145,6 @@
 			#next
 				margin-right: -120px
 
-		#news
-			padding-top: 10px
-
-			h3
-				padding: 0
-				margin-bottom: 20px
-				font-size: 45px
-				line-height: 45px
-
-			article
-				padding: 0
-				width: 100%
-				margin-bottom: 20px
-				height: 120px
-
-				h1
-					left: 20px
-					bottom: 20px
-					right: 20px
-					font-size: 14px
-					line-height: 1.2
-
-
-				&.big
-					height: 160px
-
-					h1
-						font-size: 18px
-
-				.label
-					padding: 10px
-					top: -10px
-					right: -10px
-
-					a
-						margin: 0
-
-
 
 	.mobile
 		#contactHeader
@@ -335,11 +297,11 @@
 							height: 50px
 
 
-		main.content
+		.content
 			padding-top: 40px
 			padding-bottom: 20px
 
-			& > .subtitle
+			.subtitle
 				display: block
 				position: relative
 				padding-bottom: 30px
@@ -415,7 +377,42 @@
 					margin: 20px 0
 
 
+	#news
+		padding-top: 10px
 
+		h3
+			padding: 0
+			margin-bottom: 20px
+			font-size: 45px
+			line-height: 45px
+
+		article
+			padding: 0
+			width: 100%
+			margin-bottom: 20px
+			height: 120px
+
+			h1
+				left: 20px
+				bottom: 20px
+				right: 20px
+				font-size: 14px
+				line-height: 1.2
+
+
+			&.big
+				height: 160px
+
+				h1
+					font-size: 18px
+
+			.label
+				padding: 10px
+				top: -10px
+				right: -10px
+
+				a
+					margin: 0
 
 +tablet
 
@@ -496,7 +493,7 @@
 					padding-right: 50px
 					padding-top: 180px
 
-		#news
+		#newsHome
 			h3
 				margin: 0
 
@@ -641,11 +638,11 @@
 						padding-left: 0
 						padding-right: 20px
 
-		main.content
+		.content
 			padding-top: 40px
 			padding-bottom: 20px
 
-			& > .subtitle
+			.subtitle
 				display: block
 				position: relative
 				padding-bottom: 40px
@@ -702,7 +699,24 @@
 					font-size: 12px
 					
 
+	#news
+		h3
+			margin: 0
 
+		article
+			width: 50%
+			height: auto
+
+			&.big
+				width: 100%
+
+			.label
+				padding: 10px
+				top: 10px
+				right: 10px
+
+				a
+					margin: 0
 
 
 +small
@@ -741,7 +755,7 @@
 					& > a
 						padding: 20px
 
-		#news
+		#newsHome, #news
 			article
 				height: 195px
 
