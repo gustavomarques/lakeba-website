@@ -1,117 +1,15 @@
 +mobile
-
 	#homepage.mobile
 		#header
-			height: 460px
-			max-height: 460px
-			min-height: auto
-
-			h1, h2
-				+col(12,0,0,0)
-
-			h1
-				font-size: 40px 
-				line-height: 40px
-				margin-bottom: 10px
-			h2
-				font-size: 20px
-				line-height: 24px
-
-	.mobile
-
-		#contactHeader
-			display: block
-			padding-top: 10px
-			padding-bottom: 10px
-			height: auto
-			+clearfix
-			display: none
-
-			#tagline, #contactInfo
-				display: block
-				position: relative
-				left: auto
-				right: auto
-				text-align: left
-				width: 100%
-
-				span
-					line-height: 20px
-					margin-right: 20px
-					margin-left: 0
-
-
-		.wrapper
-			padding-left: 20px
-			padding-right: 20px
-
-		#lakebaLogo
-			left: 20px
-			z-index: 99
-
-		#navWrapper
-			padding-top: 20px
-
-			#navMobileButton
-				display: block
-				visibility: visible
-				pointer-events: auto
-				z-index: 99
-
-			#nav.show
-				padding-right: 20px
-
-			#nav
-				left: 100%
-				right: 0
-				overflow: hidden
-				top: -20px
-				padding-top: 80px
-				padding-bottom: 20px
-				max-width: 0
-				height: auto
-				min-height: 100%
-				background: rgba($grayDarkBlue, 0.9)
-
-				& > li
-					+animate(fadeOutLeft)
-
-				a, & > li
-					display: block
-
-				&.show
-					left: 0
-					max-width: 100%
-
-					@for $i from 1 through 30
-						& li, nav
-							&:nth-of-type(#{$i})
-								+animate(fadeInRight)
-								animation-delay: $i * 0.3s
-
-
-		#header
-			height: 220px
-			max-height: 220px
-			min-height: auto
-
-			h1, h2
-				+col(12,0,0,0)
-
-			h1
-				font-size: 30px 
-				line-height: 30px
-				margin-bottom: 0px
-
-			.featureImg
-				img
-					min-height: auto
-					min-width: auto
-					height: 100%
-
-
 			#titleWrapper
-				padding-top: 70px
+				padding-top: 100px
+				h1
+					font-size: 24px
+					line-height: 1.2
+
+				h2
+					font-size: 16px
+					line-height: 1.4
 
 		#headerComplement
 			section
@@ -135,16 +33,16 @@
 
 					nav
 						a
-							+col(4,0,0,0)
+							+col(6,0,0,0)
 							padding: 15px 0
-							font-size: 16px
+							font-size: 14px
+							line-height: 1.2
 
 					h3
 						padding-bottom: 20px
 						margin-bottom: 10px
 
-
-		#solutionsByIndustry
+		#solutions
 
 			.row
 				h3
@@ -176,9 +74,6 @@
 						margin-top: -20px
 						margin-left: 0px
 						left: 30px
-
-
-
 
 		#corporateResponsibility
 			height: auto
@@ -218,7 +113,6 @@
 					padding-top: 10px
 					font-size: 12px
 
-
 		#shortcutsLinks
 			height: 540px
 
@@ -243,13 +137,13 @@
 						width: 160px
 						bottom: -30px
 						line-height: 50px
+						margin-left: -80px
 
 			#prev
 				margin-left: -120px
 
 			#next
 				margin-right: -120px
-
 
 		#news
 			padding-top: 10px
@@ -264,7 +158,7 @@
 				padding: 0
 				width: 100%
 				margin-bottom: 20px
-				height: 140px
+				height: 120px
 
 				h1
 					left: 20px
@@ -275,7 +169,7 @@
 
 
 				&.big
-					height: 200px
+					height: 160px
 
 					h1
 						font-size: 18px
@@ -287,6 +181,106 @@
 
 					a
 						margin: 0
+
+
+
+	.mobile
+		#contactHeader
+			display: block
+			padding-top: 10px
+			padding-bottom: 10px
+			height: auto
+			+clearfix
+			display: none
+
+			#tagline, #contactInfo
+				display: block
+				position: relative
+				left: auto
+				right: auto
+				text-align: left
+				width: 100%
+
+				span
+					line-height: 20px
+					margin-right: 20px
+					margin-left: 0
+
+
+		.wrapper
+			padding-left: 20px
+			padding-right: 20px
+
+
+		#navWrapper
+			padding-top: 20px
+
+			#lakebaLogo
+				left: 20px
+				z-index: 99
+
+			#navMobileButton
+				display: block
+				visibility: visible
+				pointer-events: auto
+				z-index: 99
+				right: 20px
+
+			#nav.show
+				padding-right: 20px
+
+			#nav
+				left: 100%
+				right: 0
+				overflow: hidden
+				top: -20px
+				padding-top: 80px
+				padding-bottom: 20px
+				max-width: 0
+				height: auto
+				min-height: 100%
+				background: rgba($grayDarkBlue, 0.9)
+
+				& > li
+					+animate(fadeOutLeft)
+
+				a, & > li
+					display: block
+
+				&.show
+					left: 0
+					max-width: 100%
+
+					@for $i from 1 through 30
+						& li, nav
+							&:nth-of-type(#{$i})
+								+animate(fadeInRight)
+								animation-delay: $i * 0.3s
+
+
+		#header
+			height: 240px
+			max-height: 300px
+			min-height: auto
+
+			h1, h2
+				+col(12,0,0,0)
+
+			h1
+				font-size: 30px 
+				line-height: 30px
+				margin-bottom: 0px
+
+			.featureImg
+				img
+					min-height: auto
+					min-width: auto
+					height: 100%
+
+
+			#titleWrapper
+				padding-top: 130px
+
 
 		#footer
 			#sitemapWrapper
@@ -309,16 +303,16 @@
 						a
 							display: block
 							width: 100%
-							padding: 10px 0
+							padding: 15px 0
 
 						&.ventures
-							a
-								width: 50%
-								font-size: 14px
-								float: left
+							nav 
+								a
+									width: 50%
+									font-size: 13px
+									float: left
+									padding: 5px 0 5px 20px
 
-						& > a:first-child, & > a:last-child
-							width: 100%
 
 			h4
 				font-size: 24px
@@ -351,7 +345,177 @@
 				padding-bottom: 30px
 				margin-bottom: 30px
 				font-size: 20px
+				width: 100%
+				b:before
+					left: -8px
+					top: -5px
+					right: -8px
+					bottom: -5px
+
+
+
+	#solutionsByIndustry
+		.industryType
+			.industryBox
+				width: 100%
+				display: block
+				height: 50px
+				margin-bottom: 2px
+
+				span
+					top: 50%
+					+translateY(-50%)
+					left: 70px
+					right: 20px
+					bottom: auto
+					opacity: 1
+					font-size: 12px
+					line-height: 15px
+					text-align: left
+					color: #D0D0D0
+
+				img
+					top: 50%
+					width: 30px
+					margin-top: -15px
+					margin-left: 0px
+					left: 20px
+
+				&.selected
+					+filter(saturate,100%)
+					opacity: 1
+					
+					span
+						color: $grayDarkBlue
+
+					img
+						+scale(1.1)
+						top: 50%
+
+		.ventureList
+			.venture
+				padding: 0 20px
+
+				img
+					position: relative
+					display: block
+					width: 160px
+					margin: 0 auto
+					left: auto
+					top: auto
+
+				& > a
+					position: relative
+					display: block
+					width: 100%
+					right: auto
+					bottom: auto
+					padding: 10px
+					font-size: 12px
+					margin: 20px 0
+
+
+
+
 +tablet
+
+	#homepage.tablet
+		background-position: 200px 250px
+
+		#header
+			height: 450px
+
+		#headerComplement
+			section
+				#blueBox
+					padding: 20px 0
+					width: auto
+					text-align: center
+					right: 0
+					top: -70px
+
+					a
+						text-align: center
+						display: inline-block
+						width: auto
+						font-size: 22px
+
+				#venturesLinks
+					+col(12,0,0,0)
+					width: auto
+					padding-top: 60px
+
+					nav
+						a
+							padding: 20px
+
+		#solutions
+			padding-top: 0
+
+			h3
+				font-size: 34px
+				line-height: 40px
+
+			.industryBox
+				height: 220px
+				span
+					top: 140px
+					left: 20px
+					right: 20px
+					opacity: 1
+					font-size: 14px
+					line-height: 18px
+
+				img
+					top: 40%
+					opacity: 1
+					+filter(saturate,100%)
+
+		#corporateResponsibility
+
+			&, & .wrapper
+				height: 540px
+
+			h3
+				top: 0
+				left: 40px
+				right: 40px
+				text-align: center
+
+			.responsibilityType
+				width: 48%
+				top: 100px
+				font-size: 34px
+				height: 300px
+
+				&.social
+					padding-left: 50px
+					padding-top: 180px
+
+				&.environmental
+					padding-right: 50px
+					padding-top: 180px
+
+		#news
+			h3
+				margin: 0
+
+			article
+				width: 50%
+				height: auto
+
+				&.big
+					width: 100%
+
+				.label
+					padding: 10px
+					top: 10px
+					right: 10px
+
+					a
+						margin: 0
+
+
 	.tablet
 
 		#contactHeader
@@ -367,7 +531,6 @@
 				span
 					margin-right: 30px
 					margin-left: 0
-
 			
 		#lakebaLogo
 			left: 20px
@@ -432,11 +595,10 @@
 								+animate(fadeInRight)
 								animation-delay: $i * 0.3s
 
-		#titleWrapper
-			padding-top: 120px
-
-		header
-			height: 500px
+		#header
+			height: 360px
+			max-height: 360px
+			min-height: auto
 
 			h1
 				font-size: 50px
@@ -447,97 +609,14 @@
 				line-height: 1.2
 				+col(9,0,0,0)
 
-		#headerComplement
-			section
-				#blueBox
-					padding: 20px 0
-					width: auto
-					text-align: center
-					right: 0
-					top: -70px
-
-					a
-						text-align: center
-						display: inline-block
-						width: auto
-						font-size: 22px
-
-				#venturesLinks
-					+col(12,0,0,0)
-					width: auto
-					padding-top: 60px
-
-					nav
-						a
-							padding: 20px
-
-
-		#solutionsByIndustry
-
-			h3
-				font-size: 34px
-				line-height: 40px
-
-			.industryBox
-				height: 220px
-				span
-					top: 140px
-					left: 20px
-					right: 20px
-					opacity: 1
-					font-size: 14px
-					line-height: 18px
-
+			.featureImg
 				img
-					top: 40%
-					opacity: 1
-					+filter(saturate,100%)
+					min-height: auto
+					min-width: auto
+					height: 100%
 
-
-
-		#corporateResponsibility
-
-			&, & .wrapper
-				height: 540px
-
-			h3
-				top: 0
-				left: 40px
-				right: 40px
-				text-align: center
-
-			.responsibilityType
-				width: 48%
-				top: 100px
-				font-size: 34px
-				height: 300px
-
-				&.social
-					padding-left: 50px
-					padding-top: 180px
-
-				&.environmental
-					padding-right: 50px
-					padding-top: 180px
-
-		#news
-			h3
-				margin: 0
-
-			article
-				width: 50%
-				height: auto
-
-				&.big
-					width: 100%
-
-				.label
-					padding: 10px
-					top: 10px
-					right: 10px
-
-					a
-						margin: 0
+			#titleWrapper
+				padding-top: 180px
 
 		#footer
 			#sitemapWrapper
@@ -562,8 +641,78 @@
 						padding-left: 0
 						padding-right: 20px
 
+		main.content
+			padding-top: 40px
+			padding-bottom: 20px
+
+			& > .subtitle
+				display: block
+				position: relative
+				padding-bottom: 40px
+				margin-bottom: 40px
+				font-size: 30px
+				width: 100%
+
+
+	#solutionsByIndustry
+		.industryType
+			.industryBox
+				//display: block
+				width: 24.8%
+				//float: left
+				//height: 160px
+				//background: $whitePure
+				//position: relative
+				margin: 0.1%
+
+				span
+					opacity: 1
+					color: #D0D0D0
+					top: 110px
+
+				img
+					top: 40%
+
+				&.selected
+					+filter(saturate,100%)
+					opacity: 1
+					
+					span
+						color: $grayDarkBlue
+
+					img
+						+scale(1.1)
+						top: 40%
+
+		.ventureList
+			.venture
+				padding: 0 40px
+				padding-bottom: 50px
+
+				img
+					position: relative
+					display: block
+					width: 160px
+					left: auto
+					top: auto
+					margin: 0
+
+				& > a
+					padding: 15px 40px
+					font-size: 12px
+					
+
+
+
+
 +small
-	#homepage.small
+	.small
+
+		#contactHeader
+			#contactInfo
+				span
+					margin-left: 30px	
+
 		#headerComplement
 			section
 				#blueBox

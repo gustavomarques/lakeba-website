@@ -4,21 +4,21 @@
 // General Scripts
 // ------------------------------------------------
 
-if (screen.width < 1030) {
-	$("body > section").waypoint(function() {
-		$(this).toggleClass("active");
-	}, { offset: 800 });
-}
-else {
-	$("body > section").waypoint(function() {
-		$(this).toggleClass("active");
-	}, { offset: 500 });
-}
-
 
 
 
 $(document).ready(function() {
+
+	if (screen.width < 1030) {
+		$("body > section").waypoint(function() {
+			$(this).toggleClass("active");
+		}, { offset: 800 });
+	}
+	else {
+		$("body > section").waypoint(function() {
+			$(this).toggleClass("active");
+		}, { offset: 400 });
+	}
 
 	
 		$('#nav > li:has(ul)').addClass('submenu');
@@ -72,6 +72,23 @@ $btnMobile.click(function(){
 	$('#nav').toggleClass('show');
 	$('#navMobileButton').toggleClass('active');
 })
+
+// ------------------------------------------------
+// Solutions By industry
+// ------------------------------------------------
+
+//$("#industryTab ul").idTabs(); 
+
+$("#industryTab ul").idTabs(function(id,list,set){ 
+	$("a",set).removeClass("selected") 
+	.filter("[href='"+id+"']",set).addClass("selected"); 
+
+	for(i in list) 
+		$(list[i]).hide().removeClass("active"); 
+	$(id).fadeIn().addClass("active"); 
+
+	return false; 
+}); 
 
 
 // ------------------------------------------------

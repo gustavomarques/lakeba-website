@@ -1,5 +1,5 @@
 Project path:
-~/Library/Mobile\ Documents/com~apple~CloudDocs/JOBS/Lakeba/Lakeba\ company/website/frontend
+cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/JOBS/Lakeba/Lakeba\ company/website/frontend
 
 
 Marvel link:
