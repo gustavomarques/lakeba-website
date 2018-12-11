@@ -5780,22 +5780,67 @@ body #header #titleWrapper {
 }
 
 /* line 1582, sass/_layout.sass */
+#conceive .magazineCover {
+  top: -400px;
+  right: 40px;
+  position: absolute;
+  height: auto;
+  display: block;
+  z-index: 1;
+  width: 400px;
+  padding-bottom: 40px;
+}
+/* line 1592, sass/_layout.sass */
+#conceive .magazineCover img {
+  display: block;
+  width: 100%;
+}
+@media (max-width: 760px) {
+  /* line 1582, sass/_layout.sass */
+  #conceive .magazineCover {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  /* line 1582, sass/_layout.sass */
+  #conceive .magazineCover {
+    top: -225px;
+    width: 280px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 1608, sass/_layout.sass */
+  #conceive .subtitle {
+    width: 60%;
+  }
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  /* line 1612, sass/_layout.sass */
+  #conceive .subtitle {
+    width: 55%;
+  }
+}
+/* line 1617, sass/_layout.sass */
 #conceive p {
   font-size: 18px;
 }
 @media (min-width: 761px) and (max-width: 1024px) {
-  /* line 1582, sass/_layout.sass */
+  /* line 1617, sass/_layout.sass */
   #conceive p {
     font-size: 14px;
   }
 }
 @media (max-width: 760px) {
-  /* line 1582, sass/_layout.sass */
+  /* line 1617, sass/_layout.sass */
   #conceive p {
     font-size: 14px;
   }
 }
-/* line 1592, sass/_layout.sass */
+/* line 1627, sass/_layout.sass */
 #conceive .row h3 {
   flex: 3 1 25%;
   padding: 0px;
@@ -5809,7 +5854,7 @@ body #header #titleWrapper {
   font-weight: 600;
 }
 @media (min-width: 761px) and (max-width: 1024px) {
-  /* line 1592, sass/_layout.sass */
+  /* line 1627, sass/_layout.sass */
   #conceive .row h3 {
     flex: 12 1 100%;
     padding: 0px;
@@ -5821,7 +5866,7 @@ body #header #titleWrapper {
   }
 }
 @media (max-width: 760px) {
-  /* line 1592, sass/_layout.sass */
+  /* line 1627, sass/_layout.sass */
   #conceive .row h3 {
     flex: 12 1 100%;
     padding: 0px;
@@ -5832,7 +5877,7 @@ body #header #titleWrapper {
     padding-bottom: 30px;
   }
 }
-/* line 1611, sass/_layout.sass */
+/* line 1646, sass/_layout.sass */
 #conceive .row .visiontext {
   flex: 9 1 75%;
   padding: 0px;
@@ -5841,7 +5886,7 @@ body #header #titleWrapper {
   flex-shrink: 1;
 }
 @media (min-width: 761px) and (max-width: 1024px) {
-  /* line 1611, sass/_layout.sass */
+  /* line 1646, sass/_layout.sass */
   #conceive .row .visiontext {
     flex: 12 1 100%;
     padding: 0px;
@@ -5851,7 +5896,7 @@ body #header #titleWrapper {
   }
 }
 @media (max-width: 760px) {
-  /* line 1611, sass/_layout.sass */
+  /* line 1646, sass/_layout.sass */
   #conceive .row .visiontext {
     flex: 12 1 100%;
     padding: 0px;
@@ -5860,7 +5905,7 @@ body #header #titleWrapper {
     flex-shrink: 1;
   }
 }
-/* line 1620, sass/_layout.sass */
+/* line 1655, sass/_layout.sass */
 #conceive .row .hubPartner {
   flex: 3 1 25%;
   padding: 0px;
@@ -5869,20 +5914,20 @@ body #header #titleWrapper {
   flex-shrink: 1;
   padding: 20px;
 }
-/* line 1624, sass/_layout.sass */
+/* line 1659, sass/_layout.sass */
 #conceive .row .hubPartner img {
   height: 60px;
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
 }
-/* line 1630, sass/_layout.sass */
+/* line 1665, sass/_layout.sass */
 #conceive .row .hubPartner p {
   font-size: 14px;
   line-height: 1.8;
 }
 @media (min-width: 761px) and (max-width: 1024px) {
-  /* line 1620, sass/_layout.sass */
+  /* line 1655, sass/_layout.sass */
   #conceive .row .hubPartner {
     flex: 4 1 33.33333%;
     padding: 0px;
@@ -5890,20 +5935,20 @@ body #header #titleWrapper {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 1636, sass/_layout.sass */
+  /* line 1671, sass/_layout.sass */
   #conceive .row .hubPartner img {
     margin-bottom: 10px;
     margin-top: 40px;
     height: 50px;
   }
-  /* line 1640, sass/_layout.sass */
+  /* line 1675, sass/_layout.sass */
   #conceive .row .hubPartner p {
     font-size: 12px;
     line-height: 1.6;
   }
 }
 @media (max-width: 760px) {
-  /* line 1620, sass/_layout.sass */
+  /* line 1655, sass/_layout.sass */
   #conceive .row .hubPartner {
     flex: 12 1 100%;
     padding: 0px;
@@ -5911,44 +5956,44 @@ body #header #titleWrapper {
     flex-grow: 0;
     flex-shrink: 1;
   }
-  /* line 1646, sass/_layout.sass */
+  /* line 1681, sass/_layout.sass */
   #conceive .row .hubPartner img {
     margin-bottom: 10px;
     margin-top: 40px;
     height: 50px;
   }
-  /* line 1650, sass/_layout.sass */
+  /* line 1685, sass/_layout.sass */
   #conceive .row .hubPartner p {
     font-size: 12px;
     line-height: 1.6;
   }
 }
 
-/* line 1655, sass/_layout.sass */
+/* line 1690, sass/_layout.sass */
 .imgConceive {
   width: 100%;
   display: block;
   margin: 0 auto;
 }
 @media (min-width: 761px) and (max-width: 1024px) {
-  /* line 1655, sass/_layout.sass */
+  /* line 1690, sass/_layout.sass */
   .imgConceive {
     margin-bottom: 40px;
   }
 }
 @media (max-width: 760px) {
-  /* line 1655, sass/_layout.sass */
+  /* line 1690, sass/_layout.sass */
   .imgConceive {
     margin-bottom: 40px;
   }
 }
 
-/* line 1672, sass/_layout.sass */
+/* line 1707, sass/_layout.sass */
 #news {
   padding-top: 60px;
   padding-bottom: 10px;
 }
-/* line 1676, sass/_layout.sass */
+/* line 1711, sass/_layout.sass */
 #news article {
   width: 33.3%;
   padding: 20px;
@@ -5957,26 +6002,26 @@ body #header #titleWrapper {
   position: relative;
   float: left;
 }
-/* line 1686, sass/_layout.sass */
+/* line 1721, sass/_layout.sass */
 #news article.big {
   width: 66.6%;
   height: 480px;
 }
-/* line 1689, sass/_layout.sass */
+/* line 1724, sass/_layout.sass */
 #news article.big h1 {
   font-size: 40px;
   left: 70px;
   bottom: 70px;
   right: 70px;
 }
-/* line 1695, sass/_layout.sass */
+/* line 1730, sass/_layout.sass */
 #news article a {
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: block;
 }
-/* line 1701, sass/_layout.sass */
+/* line 1736, sass/_layout.sass */
 #news article a img {
   display: block;
   width: 100%;
@@ -5986,7 +6031,7 @@ body #header #titleWrapper {
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 1708, sass/_layout.sass */
+/* line 1743, sass/_layout.sass */
 #news article a:hover img {
   -webkit-filter: brightness(60%);
   -moz-filter: brightness(60%);
@@ -5998,7 +6043,7 @@ body #header #titleWrapper {
   -webkit-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 1713, sass/_layout.sass */
+/* line 1748, sass/_layout.sass */
 #news article h1 {
   display: block;
   position: absolute;
@@ -6010,7 +6055,7 @@ body #header #titleWrapper {
   line-height: 1.25;
   color: #fff;
 }
-/* line 1724, sass/_layout.sass */
+/* line 1759, sass/_layout.sass */
 #news article .label {
   background: #fff;
   position: absolute;
@@ -6020,7 +6065,7 @@ body #header #titleWrapper {
   padding: 15px;
   z-index: 1;
 }
-/* line 1733, sass/_layout.sass */
+/* line 1768, sass/_layout.sass */
 #news article .label a {
   font-size: 12px;
   color: #2c3a4c;
@@ -6029,13 +6074,13 @@ body #header #titleWrapper {
   margin-bottom: 5px;
   display: block;
 }
-/* line 1741, sass/_layout.sass */
+/* line 1776, sass/_layout.sass */
 #news article .label span {
   font-size: 10px;
   line-height: 10px;
 }
 
-/* line 1745, sass/_layout.sass */
+/* line 1780, sass/_layout.sass */
 .pagination {
   display: block;
   padding: 20px;
@@ -6044,7 +6089,7 @@ body #header #titleWrapper {
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   margin: 20px 20px 0 20px;
 }
-/* line 1754, sass/_layout.sass */
+/* line 1789, sass/_layout.sass */
 .pagination a {
   display: inline-block;
   font-weight: 600;
@@ -6055,7 +6100,7 @@ body #header #titleWrapper {
   margin: 0 10px;
   opacity: 0.5;
 }
-/* line 1764, sass/_layout.sass */
+/* line 1799, sass/_layout.sass */
 .pagination a.active {
   background: #2c3a4c;
   -moz-border-radius: 100%;
@@ -6068,13 +6113,24 @@ body #header #titleWrapper {
   -webkit-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 1771, sass/_layout.sass */
+/* line 1806, sass/_layout.sass */
 .pagination a:hover {
   opacity: 1;
   -moz-transform: scale(2, 2);
   -ms-transform: scale(2, 2);
   -webkit-transform: scale(2, 2);
   transform: scale(2, 2);
+}
+
+/* line 1819, sass/_layout.sass */
+#our_culture .text, #our_culture .ourCultureImg {
+  display: block;
+  float: none;
+}
+/* line 1824, sass/_layout.sass */
+#our_culture .ourCultureImg span {
+  display: block;
+  float: left;
 }
 
 @media (max-width: 760px) {

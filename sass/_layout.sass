@@ -1579,6 +1579,41 @@ body
 // ------------------------------------------------------------------
 
 #conceive
+	.magazineCover
+		top: -400px
+		right: 40px
+		position: absolute
+		height: auto
+		display: block
+		z-index: 1
+		width: 400px
+		padding-bottom: 40px
+
+		img
+			display: block
+			width: 100%
+
+		+mobile
+			position: relative
+			top: auto
+			right: auto
+			margin: 0 auto
+			width: 70%
+
+		+tablet
+			top: -225px
+			width: 280px
+
+	+small
+		.subtitle
+			width: 60%
+
+	+tablet
+		.subtitle
+			width: 55%
+
+
+
 	p
 		font-size: 18px
 
@@ -1771,6 +1806,38 @@ body
 		&:hover
 			opacity: 1
 			+scale(2)
+
+
+
+
+
+// ------------------------------------------------------------------
+// Our Culture
+// ------------------------------------------------------------------
+
+#our_culture
+	.text, .ourCultureImg
+		display: block
+		float: none
+
+	.ourCultureImg
+		span
+			display: block
+			float: left
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------------
+// TEMP
+// ------------------------------------------------------------------
+
+
+
 
 
 
