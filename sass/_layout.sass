@@ -1816,14 +1816,162 @@ body
 // ------------------------------------------------------------------
 
 #our_culture
-	.text, .ourCultureImg
+	section, .ourCultureImg
 		display: block
 		float: none
+		position: relative
 
-	.ourCultureImg
+	.ourCultureImg2
+		height: 800px
+
 		span
 			display: block
+			position: absolute
+			+bgCover
+			padding: 60px
+			background-position: center center
+			background-repeat: no-repeat
+			vertical-align: bottom
+			font-size: 50px
+			line-height: 1
+			color: $whitePure
+
+			&:nth-of-type(1)
+				top: 10%
+				bottom: 10%
+				right: 53%
+				width: 35%
+				background-image: url(img/our_culture-image1.jpg)
+
+			&:nth-of-type(2)
+				top: 0
+				width: 50%
+				left: 50%
+				bottom: 55%
+				background-image: url(img/our_culture-image2.jpg)
+
+			&:nth-of-type(3)
+				top: 50%
+				left: 50%
+				bottom: 0px
+				width: 40%
+				background-image: url(img/our_culture-image3.jpg)
+
+	.ourCultureImg
+		display: block
+		position: relative
+		float: none
+		padding-top: 20px
+		padding-bottom: 40px
+		+clearfix
+
+		div
+			position: relative
+			width: 50%
+			display: block
 			float: left
+			height: 300px
+
+			.bg, .text
+				display: block
+				position: absolute
+				
+			.bg
+				+bgCover
+				padding: 60px
+				background-position: center center
+				background-repeat: no-repeat
+				top: 0
+
+
+			.text
+				font-size: 40px
+				line-height: 0.9
+				color: $whitePure
+				z-index: 1
+				padding: 40px
+				bottom: 0
+				left: 0
+				font-weight: 600
+				padding-right: 100px
+
+
+			&:nth-of-type(1)
+				height: 600px
+
+				.bg, .text
+					left: 200px
+					bottom: 0px
+					right: 40px
+
+				.bg
+					background-image: url(img/our_culture-image1.jpg)
+
+
+
+			&:nth-of-type(2)
+				.bg, .text
+					left: 0
+					bottom: 40px
+					right: 100px
+
+				.bg
+					background-image: url(img/our_culture-image2.jpg)
+
+
+			&:nth-of-type(3)
+				.bg, .text
+					left: 0
+					bottom: 0
+					right: 300px
+
+				.bg
+					background-image: url(img/our_culture-image3.jpg)
+
+			+tablet
+				height: 200px
+
+				.text
+					font-size: 26px
+					padding: 30px
+					padding-right: 60px
+
+				&:nth-of-type(1)
+					height: 400px
+
+					.bg, .text
+						left: 100px
+						right: 40px	
+
+				&:nth-of-type(2)
+					.bg, .text
+						right: 0	
+
+				&:nth-of-type(3)
+					.bg, .text
+						right: 150px
+			+mobile
+				height: 150px
+
+				.text
+					font-size: 16px
+					padding: 20px
+
+				&:nth-of-type(1)
+					height: 300px
+
+					.bg, .text
+						left: 0
+						right: 20px	
+
+				&:nth-of-type(2)
+					.bg, .text
+						right: 0
+						bottom: 20px	
+
+				&:nth-of-type(3)
+					.bg, .text
+						right: 0
 
 
 
@@ -1833,8 +1981,140 @@ body
 
 
 // ------------------------------------------------------------------
-// TEMP
+// Our Partners
 // ------------------------------------------------------------------
+
+.partnersWrapper
+	width: 100%
+	float: none
+	display: block
+	+clearfix
+	background: $whitePure
+	position: relative
+	margin-top: 20px
+
+	.wrapper
+		padding-top: 60px
+
+	.cta
+		position: absolute
+		top: -60px
+		right: 0
+		width: 400px
+		padding: 15px 30px 20px 30px
+		font-size: 20px
+		line-height: 1.5
+		+box-shadow(#0F91C8 0 6px 0)
+		background: $blue
+		+border-radius(10px)
+		color: $whitePure
+		text-transform: uppercase
+		text-align: center
+
+		+tablet
+			padding: 10px 30px 15px 30px
+			font-size: 14px
+			right: 40px
+			width: 300px
+			top: -30px
+
+
+		+mobile
+			padding: 10px 20px 15px 20px
+			font-size: 12px
+			right: auto
+			left: 50%
+			width: 280px
+			top: -30px
+			margin-left: -140px
+
+	h3
+		font-size: 40px
+		line-height: 1.25
+		font-weight: 600
+		padding: 20px 0
+		text-transform: uppercase
+
+		+mobile
+			font-size: 24px
+
+		+tablet
+			font-size: 30px
+
+	.partner
+		margin-bottom: 40px
+		.img
+			+col(2, 0, 0, 0)
+			img
+				display: block
+				width: 100%
+
+			+mobile
+				+col(12,0,0,0)
+				padding: 0px 50px 20px 50px
+
+			+tablet
+				+col(3, 0, 0, 0)
+
+		.text
+			+col(10, 0, 0, 0)
+			padding-left: 60px
+			padding-top: 20px
+			p
+				font-size: 14px
+				line-height: 1.6
+
+
+			+mobile
+				+col(12,0,0,0)
+				p
+					font-size: 12px
+
+			+tablet
+				+col(9, 0, 0, 0)
+				padding-left: 60px
+
+
+#our_partners2
+
+	p
+		font-size: 18px
+
+		+tablet
+			font-size: 14px
+
+		+mobile
+			font-size: 14px
+
+	.row
+		h3
+			+col(3,0,0,0)
+			font-size: 38px
+			line-height: 1
+			text-transform: uppercase
+			color: $grayDarkBlue
+			font-weight: 600
+
+
+			+tablet
+				+col(12,0,0,0)
+				font-size: 30px
+				padding-bottom: 20px
+
+			+mobile
+				+col(12,0,0,0)
+				font-size: 26px
+				padding-bottom: 30px
+
+		.text
+			+col(9,0,0,0)
+			padding-left: 60px
+
+			+tablet
+				+col(12,0,0,0)
+
+			+mobile
+				+col(12,0,0,0)
 
 
 

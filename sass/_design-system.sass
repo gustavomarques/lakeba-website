@@ -64,16 +64,16 @@ $blue2purple: $gBlue, $gPurple
 
 // Ex.: +box-shadow(0,0,30px,$gBlue)
 
-@mixin box-shadow($xAxis, $yAxis, $blur, $color, $inset: false)
-	@if $inset
-		-webkit-box-shadow:inset $xAxis $yAxis $blur $color
-		-moz-box-shadow:inset $xAxis $yAxis $blur $color
-		box-shadow:inset $xAxis $yAxis $blur $color
-	@else
-		-webkit-box-shadow: $xAxis $yAxis $blur $color
-		-moz-box-shadow: $xAxis $yAxis $blur $color
-		box-shadow: $xAxis $yAxis $blur $color
-
+//@mixin box-shadow($xAxis, $yAxis, $blur, $color, $inset: false)
+//	@if $inset
+//		-webkit-box-shadow:inset $xAxis $yAxis $blur $color
+//		-moz-box-shadow:inset $xAxis $yAxis $blur $color
+//		box-shadow:inset $xAxis $yAxis $blur $color
+//	@else
+//		-webkit-box-shadow: $xAxis $yAxis $blur $color
+//		-moz-box-shadow: $xAxis $yAxis $blur $color
+//		box-shadow: $xAxis $yAxis $blur $color
+//
 
 // ------------------------------------------------------------------
 // Scroll css3
@@ -247,16 +247,10 @@ p
 	cursor: pointer
 	+box-sizing(border-box)
 	+border-radius(5px)
-	+box-shadow(+darken($primaryColor, 20%) 0 6px 0)
+	+box-shadow(0, 6px, 0, +darken($primaryColor, 20%))
 	+transition
-	+font
 
 	&:hover, &:active
-		+box-shadow(+darken($primaryColor, 20%) 0 3px 0)
+		+box-shadow(0, 3px, 0, +darken($primaryColor, 20%))
 		background: +darken($primaryColor, 5%)
-		top: 3px
-
-	&:active
-		+box-shadow(+darken($primaryColor, 20%) 0 0px 0)
-		background: +darken($corPrincipal, 10%)
-		top: 6px
+		+translateY(3px)
