@@ -1592,6 +1592,37 @@ body
 		img
 			display: block
 			width: 100%
+			z-index: 0
+
+		a
+			display: block
+			position: absolute
+			bottom: 20px
+			left: 80px
+			right: 80px
+			padding: 15px 30px 20px 30px
+			font-size: 16px
+			line-height: 1.5
+			background: $red
+			+border-radius(10px)
+			color: $whitePure
+			text-transform: uppercase
+			text-align: center
+			z-index: 2
+
+			+tablet
+				padding: 10px 30px 15px 30px
+				font-size: 14px
+				left: 30px
+				right: 30px
+
+
+			+mobile
+				padding: 10px 20px 15px 20px
+				font-size: 12px
+				left: 20px
+				right: 20px
+				+border-radius(4px)
 
 		+mobile
 			position: relative
