@@ -16,10 +16,6 @@ $btnMobile.click(function(){
 
 
 
-
-
-
-
 $(document).ready(function() {
 
 	if (screen.width < 1030) {
