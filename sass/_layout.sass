@@ -13,7 +13,7 @@ body
 
 
 #header
-	max-height: 500px
+	height: 500px
 	display: block
 	position: relative
 	background-position: center center
@@ -79,222 +79,118 @@ body
 			+scale(1.2)
 
 
+#lakebaLogo
+	position: absolute
+	left: 40px
+	top: 10px
+	display: block
+	z-index: 99
+
+	+mobile
+		left: 20px
+
+	img
+		width: 140px
+		display: block
+
+	&:hover
+		img
+			+scale(1.2)
+
 
 
 #navWrapper
+	z-index: 10
 	position: relative
 	position: -webkit-sticky
 	position: sticky
 	display: block
+	padding-top: 20px
 	+clearfix
-	padding-top: 40px
-	min-height: 60px
-	margin-bottom: -60px
-	z-index: 2
-
-	a
-		line-height: 60px
-		display: inline-block
-
-	#lakebaLogo
-		position: absolute
-		left: 40px
-		display: block
-		padding-top: 12px
-
-		img
-			width: 140px
-			display: block
-
-		&:hover
-			img
-				+scale(1.2)
 
 	#nav
+		display: block
+		width: 100%
+		padding-left: 160px
+		height: 60px
 		text-align: right
-		position: absolute
-		left: 180px
-		right: 0px
 
-		.disable
-			pointer-events: none
-			cursor: default
+		li
+			position: relative
+			display: block
+
+			a, span
+				display: block
+				opacity: 0.6
+				font-weight: 600
+				line-height: 15px
+			
+				&:hover
+					opacity: 1
+
+
+			//span
+				//pointer-events: none
+
+
+
+			ul
+				display: block
+				text-align: left
+				padding: 0px 5px 0px 15px
+				+clearfix
+				+transition(none)
+
+				span, a
+					font-size: 12px
+					color: #000
+					padding: 10px 15px
+
+				li
+					ul
+						li:before
+							display: block
+							content: " "
+							position: absolute
+							top: 50%
+							height: 2px
+							margin-top: -1px
+							width: 5px
+							background: #000
+
 
 		& > li
 			display: inline-block
-			position: relative
-			+clearfix
-			opacity: 0.6
 
-			& > a
-				line-height: 60px
-				color: $whitePure
-				padding: 20px 40px
-				line-height: 20px
+
+			& > a, & > span
+				color: #fff
 				font-size: 16px
-				font-weight: 600
-
-			&:hover
-				opacity: 1
-		
-		li.submenu
+				padding: 0 20px
+				line-height: 60px
+				+transition
+				
+				&:hover
+					+scale(1.2)
 
 			& > ul
-				height: auto
-				max-height: 1px
-				overflow: hidden
-				+box-sizing(border-box)
-				+clearfix
-				display: block
-				width: 100%
 				position: absolute
-				padding: 0
-				background: $whitePure
-				z-index: -1
-				top: 0
-				+clearfix
-				+box-shadow(0, 0px, 50px, rgba($grayDarkBlue, 0.6))
-				opacity: 0
+				background: #fff
+				padding: 15px
+				left: -15px
+				width: 180px
 
-				*
-					display: block
-					text-align: left
-					color: $grayDarkBlue
-					font-weight: 600
-					font-size: 12px
-					line-height: 15px
+				li, a, span
+					width: 100%
 
-				a, span
-					padding: 15px 30px
-					position: relative
-					opacity: 0.6
-				
-				a:hover
-					opacity: 1
-
-				& > li > a
-					&:after
-						content: ''
-						position: absolute
-						left: 30px
-						bottom: -2px
-						height: 2px
-						background-color: $grayDarkBlue
-						width: 20px
-						transition: width .4s
-
-					&:hover
-						&:after
-							width: 80px
-
-
-				nav
-					span
-						padding-bottom: 10px
-
-					a
-						padding: 5px 10px
-						margin-left: 40px
-						margin-right: 10px
-
-						&:after
-							content: ' '
-							position: absolute
-							left: -10px
-							top: 50%
-							+translateY(-50%)
-							background-color: $grayDarkBlue
-							width: 3px
-							height: 2px
-							transition: width .4s
-							display: block
-
-						&:hover
-							&:after
-								height: 25px
-
-
-			&:hover
-				& > ul
-					height: auto
-					max-height: 1000px
-					padding: 60px 0px 20px 0
-					opacity: 1
-
-				& > a
-					color: $grayDarkBlue
-					z-index: 2
-
-					&:after
-						content: ''
-						position: absolute
-						left: 30px
-						bottom: -2px
-						height: 2px
-						background-color: $grayDarkBlue
-						width: 20px
-						transition: width .4s
-
-					&:hover
-						opacity: 1
-						
-						&:after
-							width: 80px
-
-		&.show
-			left: 100%
-			right: 0
-			background: rgba(red,0.7)
-			display: block
-			z-index: 98
-			left: 0
-
-
-			li, li.submenu > ul *, a, span
-				color: $whitePure
-				text-align: right
-				display: block
-				opacity: 1
-
-			li
-
-				a
-					padding: 10px 20px
-					color: $whitePure
-					opacity: 1
-
-				&.submenu
-					padding-left: 20px
-
-					ul
-						position: relative
-						background: none
-						display: block
-						max-height: 1000px
-						opacity: 1
-						background: rgba(0,0,0,0.2)
-				
-						nav
-							margin: 0 20px 10px 20px
-							background: rgba(0,0,0,0.2)
-							padding-bottom: 10px
-			
-							a
-								margin-right: 20px
-
-	&.sticky
-		position: fixed
-		background: rgba($grayDarkBlue, 0.7)
-		top: 0
-		right: 0
-		left: 0
-		padding-top: 10px
-		padding-bottom: 10px
-		height: 80px
+			&:last-child
+				ul
+					left: auto
+					right: 0
 
 
 	#navMobileButton
-		display: none
+		//display: none
 		visibility: hidden
 		pointer-events: none
 		-webkit-appearance: none
@@ -333,7 +229,6 @@ body
 				position: absolute
 
 		&.active
-			right: 35px
 
 			span
 				&
@@ -346,6 +241,8 @@ body
 				&:after
 					+rotate(-45deg)
 					bottom: -1px
+
+
 
 
 #footer
@@ -557,16 +454,16 @@ body
 
 
 		#titleWrapper
-			padding-top: 220px
+			padding-top: 140px 
 
 
 #homepage
 	background-image: url(img/lakeba-logo-bg.jpg)
 	background-position: 590px 460px
 	background-repeat: no-repeat
+
 	#header
 		height: 620px
-		max-height: 620px
 
 	#headerComplement
 		section
@@ -1948,6 +1845,7 @@ body
 
 				.bg
 					background-image: url(img/our_culture-image2.jpg)
+					background-position: center top
 
 
 			&:nth-of-type(3)
@@ -1960,7 +1858,7 @@ body
 					background-image: url(img/our_culture-image3.jpg)
 
 			+tablet
-				height: 200px
+				height: 250px
 
 				.text
 					font-size: 26px
@@ -1968,7 +1866,7 @@ body
 					padding-right: 60px
 
 				&:nth-of-type(1)
-					height: 400px
+					height: 500px
 
 					.bg, .text
 						left: 100px
@@ -2178,14 +2076,17 @@ body
 			font-size: 20px
 
 		.advisory, .leadership
-			.people 
+			.people
+				+col(6,0,0,0)
+				padding-right: 2px
+
 				.text
-					padding: 10px 15px
+					padding: 20px 30px
 					.name
 						h4
-							font-size: 14px
+							font-size: 20px
 						span
-							font-size: 10px
+							font-size: 14px
 
 	+mobile
 		& > h3
@@ -2201,11 +2102,11 @@ body
 					padding: 10px 15px
 					.name
 						h4
-							font-size: 12px
+							font-size: 18px
 						span
-							font-size: 8px
+							font-size: 12px
 					p
-						font-size: 8px
+						font-size: 10px
 
 .advisory, .leadership
 	.people 
@@ -2408,6 +2309,9 @@ body
 // ------------------------------------------------------------------
 // TEMP
 // ------------------------------------------------------------------
+
+
+
 
 
 

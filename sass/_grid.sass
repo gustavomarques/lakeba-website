@@ -77,6 +77,10 @@ $screenSize: $default-width
 	@media (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width})
 		@content
 
+@mixin mobileAndTablet
+	@media (max-width: #{$tablet-width})
+		@content
+
 @mixin small 
 	@media (min-width: #{$tablet-width + 1px}) and (max-width: #{$small-width}) 
 		@content

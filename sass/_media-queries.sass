@@ -1,3 +1,83 @@
+// ------------------------------------
+// MENU Start
+// ------------------------------------
+
++mobileAndTablet
+	#navWrapper
+
+		#navMobileButton
+			display: block
+			visibility: visible
+			pointer-events: auto
+			z-index: 99
+			opacity: 1
+
+		#nav
+			padding: 80px 20px 40px 20px
+			background: rgba($grayDarkBlue, 0.8)
+			position: absolute
+			top: -20px
+			left: 0
+			right: 0
+			height: auto
+			text-align: right
+			z-index: 98
+			//display: none
+			+transition(none)
+
+			li, a, span
+				display: block
+				float: none
+				text-align: right
+
+			& > li
+
+				& > a
+					font-size: 20px
+					
+				& > ul
+					position: relative
+					top: auto
+					left: auto
+					right: auto
+					width: auto
+					margin: 0 10px
+
+					li, span, a
+						display: block
+						font-size: 14px
+
+						ul
+							text-align: right
+							padding: 10px 15px
+							background: rgba(0,0,0,0.03)
+
+							li
+								display: inline-block
+								width: 32%
+								&:before
+									left: auto
+									right: 0
+
+
++mobile
+	#navWrapper
+		#nav
+			& > li
+				& > a
+					font-size: 16px
+					
+				& > ul
+					li, span, a
+						ul
+							li
+								width: 95%
+
+
+// ------------------------------------
+// MENU End
+// ------------------------------------
+
 +mobile
 	#homepage.mobile
 		#header
@@ -172,52 +252,6 @@
 		.wrapper
 			padding-left: 20px
 			padding-right: 20px
-
-
-		#navWrapper
-			padding-top: 20px
-
-			#lakebaLogo
-				left: 20px
-				z-index: 99
-
-			#navMobileButton
-				display: block
-				visibility: visible
-				pointer-events: auto
-				z-index: 99
-				right: 20px
-
-			#nav.show
-				padding-right: 20px
-
-			#nav
-				left: 100%
-				right: 0
-				overflow: hidden
-				top: -20px
-				padding-top: 80px
-				padding-bottom: 20px
-				max-width: 0
-				height: auto
-				min-height: 100%
-				background: rgba($grayDarkBlue, 0.9)
-
-				& > li
-					+animate(fadeOutLeft)
-
-				a, & > li
-					display: block
-
-				&.show
-					left: 0
-					max-width: 100%
-
-					@for $i from 1 through 30
-						& li, nav
-							&:nth-of-type(#{$i})
-								+animate(fadeInRight)
-								animation-delay: $i * 0.3s
 
 
 		#header
@@ -402,9 +436,13 @@
 
 			&.big
 				height: 160px
+				width: 100%
 
 				h1
 					font-size: 18px
+					left: 20px
+					bottom: 20px
+					right: 20px
 
 			.label
 				padding: 10px
@@ -528,73 +566,10 @@
 				span
 					margin-right: 30px
 					margin-left: 0
-			
-		#lakebaLogo
-			left: 20px
-			z-index: 99
 
-		#navWrapper
-			padding-top: 20px
-
-			#navMobileButton
-				display: block
-				visibility: visible
-				pointer-events: auto
-				z-index: 99
-
-			#nav.show
-				padding-right: 20px
-
-			#nav
-				left: 100%
-				right: 0
-				overflow: hidden
-				top: -20px
-				padding-top: 80px
-				padding-bottom: 20px
-				max-width: 0
-				height: auto
-				min-height: 100%
-				background: rgba($grayDarkBlue, 0.9)
-				
-
-				& > li
-					+animate(fadeOutLeft)
-
-				a, & > li
-					display: block
-
-				&.show
-					left: auto
-					max-width: 100%
-
-					.submenu
-						ul
-							padding-top: 10px
-							padding-bottom: 10px
-
-							nav
-								span
-									font-size: 20px
-									line-height: 30px
-
-								a
-									font-size: 16px
-
-					li
-						a
-							font-size: 20px
-							line-height: 30px
-
-					@for $i from 1 through 30
-						& li, nav
-							&:nth-of-type(#{$i})
-								+animate(fadeInRight)
-								animation-delay: $i * 0.3s
 
 		#header
 			height: 360px
-			max-height: 360px
 			min-height: auto
 
 			h1
@@ -709,6 +684,7 @@
 
 			&.big
 				width: 100%
+				height: 430px
 
 			.label
 				padding: 10px
@@ -747,13 +723,7 @@
 							padding: 15px 20px 
 							opacity: 0.6
 
-		#navWrapper
-			#nav
-				right: 20px
 
-				& > li
-					& > a
-						padding: 20px
 
 		#newsHome, #news
 			article
