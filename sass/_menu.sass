@@ -1,0 +1,211 @@
+// ------------------------------------------------------------------
+// General
+// ------------------------------------------------------------------
+*
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+	color: #222
+	cursor: pointer
+	font-size: 1em
+	&:hover
+		color: deepskyblue
+
+ul
+	list-style: none
+
+img
+	width: 100%
+	vertical-align: middle
+	&:hover
+		filter: brightness(110%)
+
+.clearfix
+	&:after, &:before
+		content: ""
+		clear: both
+	&:after
+		display: table
+
+
+
+
+.menu-container
+	width: 100%
+	display: none
+	z-index: 100
+	margin: 0 auto 0 auto
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0))
+	&:after, &:before
+		content: ""
+		clear: both
+	&:after
+		display: table
+	.manu
+		width: 95%
+		display: block
+		position: relative
+		margin: 0 auto 0 auto
+
+.menu
+	ul
+		&:before
+			content: ""
+			display: table
+		&:after
+			content: ""
+			display: table
+			clear: both
+	&:before
+		content: ""
+		display: table
+	&:after
+		content: ""
+		display: table
+		clear: both
+	ul li ul
+		&:before
+			content: ""
+			display: table
+		&:after
+			content: ""
+			display: table
+			clear: both
+
+.menu-container .manu ul li
+	float: left
+	background-color: transparent
+	a
+		display: block
+		padding: 15px 25px
+		color: #fff
+		font-size: 16px
+		transition: .2s
+		span
+			transition: .3s all ease-out
+			line-height: 0px
+		&:hover
+			color: #14a0f9
+			span
+				transform: rotate(180deg)
+				padding-right: 5px
+			border-bottom: 1px solid #fff
+
+span.drop_down_icon
+	color: #fff
+	padding-left: 5px
+	font-size: 18px
+	position: absolute
+	margin-top: 11px
+
+.menu-container .manu ul li
+	.have_dropdown
+		background-color: transparent
+		position: absolute
+		left: 0
+		display: none
+		width: 100%
+		li
+			width: 25%
+			float: none
+	.have_dropdown_n_style
+		background-color: transparent
+		position: absolute
+		left: 0
+		display: none
+		width: 100%
+		li
+			a
+				color: #0076db
+				border-bottom: 1px solid #fff
+				&:hover
+					font-weight: bold
+			ul li a
+				color: #285284
+				border-bottom: none
+				&:hover
+					color: #0076db
+					font-weight: normal
+					background-color: #fafafa
+					text-decoration: underline
+			width: 25%
+			float: left
+		background-color: #eee
+	.have_dropdown li
+		a
+			width: 150px
+			text-align: center
+			float: left
+			color: #285284
+			background-color: #fff
+			font-weight: normal
+			&:hover
+				background-color: #FAFAFA
+				color: #14a0f9
+		ul li
+			display: none
+	.have_dropdown_n_style li ul li
+		background-color: #fff
+		height: auto
+		float: none
+		display: block
+		width: 100%
+
+.nav_menu_toggler_icon
+	cursor: pointer
+	position: absolute
+	right: 5%
+	top: 2.3%
+	background: none
+	color: #fff
+	font-size: 25px
+	z-index: 150
+	display: none
+	border: none
+	span
+		padding: 2px 7px
+		border-radius: 8px
+	&:active
+		color: #ddd
+
+.container_help
+	text-align: center
+	margin-top: 150px
+	h2, h1
+		color: #fff
+		font-size: 30px
+		font-weight: normal
+
+@media only screen and (max-width: 756px)
+	.nav_menu_toggler_icon
+		display: block
+	.menu-container
+		background: skyblue
+		.manu
+			display: none
+			ul li
+				float: none
+				display: block
+				.have_dropdown
+					background-color: transparent
+					display: none
+					position: relative
+					li
+						display: block
+						float: none
+						width: 100%
+						background-color: #fff
+						a
+							display: block
+							float: none
+							width: 100%
+							padding: 15px 0px
+				.have_dropdown_n_style
+					li
+						width: 100%
+						float: none
+						a
+							float: none
+					position: relative
