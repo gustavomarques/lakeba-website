@@ -1,5 +1,22 @@
 
 
+// grab the initial top offset of the navigation 
+
+var stickyNavTop = $('#navWrapper').offset().top;
+
+// our function that decides weather the navigation bar should have "fixed" css position or not.
+var stickyNav = function(){
+	var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+		 
+	// if we've scrolled more than the navigation, change its position to fixed to stick to top,
+	// otherwise change it back to relative
+	if (scrollTop > stickyNavTop) { 
+		$('#navWrapper').addClass('sticky');
+	} else {
+		$('#navWrapper').removeClass('sticky'); 
+	}
+};
+
 
 
 var $btnMobile = $('#navMobileButton');
@@ -45,38 +62,14 @@ $(document).ready(function() {
 				$(this).children('ul').stop().slideUp('fast');
 			}
 		);
-	}
 
-	
-
-
-
-
-
-// grab the initial top offset of the navigation 
-
-	var stickyNavTop = $('#navWrapper').offset().top;
-	
-	// our function that decides weather the navigation bar should have "fixed" css position or not.
-	var stickyNav = function(){
-		var scrollTop = $(window).scrollTop(); // our current vertical position from the top
-			 
-		// if we've scrolled more than the navigation, change its position to fixed to stick to top,
-		// otherwise change it back to relative
-		if (scrollTop > stickyNavTop) { 
-			$('#navWrapper').addClass('sticky');
-		} else {
-			$('#navWrapper').removeClass('sticky'); 
-		}
-	};
-
-	stickyNav();
-	// and run it again every time you scroll
-	$(window).scroll(function() {
 		stickyNav();
-	});
-	
+		// and run it again every time you scroll
+		$(window).scroll(function() {
+			stickyNav();
+		});
 
+	}
 
 	// ------------------------------------------------
 	// Testimonials carrousel
@@ -94,96 +87,90 @@ $(document).ready(function() {
 		adaptiveHeight: true
 	});
 
-	
-});
 
+	// ------------------------------------------------
+	// Home page carrousel
+	// ------------------------------------------------
 
-// ------------------------------------------------
-// Solutions By industry
-// ------------------------------------------------
+	function moveToSelected(element) {
 
-//$("#industryTab ul").idTabs(); 
+		if (element == "next") {
+			var selected = $(".selected").next();
+		} else if (element == "prev") {
+			var selected = $(".selected").prev();
+		} else {
+			var selected = element;
+		}
 
-$("#industryTab ul").idTabs(function(id,list,set){ 
-	$("a",set).removeClass("selected") 
-	.filter("[href='"+id+"']",set).addClass("selected"); 
+		var next = $(selected).next();
+		var prev = $(selected).prev();
+		var prevSecond = $(prev).prev();
+		var nextSecond = $(next).next();
 
-	for(i in list) 
-		$(list[i]).hide().removeClass("active"); 
-	$(id).fadeIn().addClass("active"); 
+		$(selected).removeClass().addClass("selected");
 
-	return false; 
-}); 
+		$(prev).removeClass().addClass("prev");
+		$(next).removeClass().addClass("next");
 
+		$(nextSecond).removeClass().addClass("nextRightSecond");
+		$(prevSecond).removeClass().addClass("prevLeftSecond");
 
-// ------------------------------------------------
-// Home page carrousel
-// ------------------------------------------------
+		$(nextSecond).nextAll().removeClass().addClass('hideRight');
+		$(prevSecond).prevAll().removeClass().addClass('hideLeft');
 
-function moveToSelected(element) {
-
-	if (element == "next") {
-		var selected = $(".selected").next();
-	} else if (element == "prev") {
-		var selected = $(".selected").prev();
-	} else {
-		var selected = element;
 	}
 
-	var next = $(selected).next();
-	var prev = $(selected).prev();
-	var prevSecond = $(prev).prev();
-	var nextSecond = $(next).next();
+	// Keyboard events
+	$(document).keydown(function(e) {
+		switch(e.which) {
+			case 37: // left
+			moveToSelected('prev');
+			break;
 
-	$(selected).removeClass().addClass("selected");
+			case 39: // right
+			moveToSelected('next');
+			break;
 
-	$(prev).removeClass().addClass("prev");
-	$(next).removeClass().addClass("next");
+			default: return;
+		}
+		e.preventDefault();
+	});
 
-	$(nextSecond).removeClass().addClass("nextRightSecond");
-	$(prevSecond).removeClass().addClass("prevLeftSecond");
 
-	$(nextSecond).nextAll().removeClass().addClass('hideRight');
-	$(prevSecond).prevAll().removeClass().addClass('hideLeft');
+	$('#shortcutsLinks > main > div').click(function() {
+		moveToSelected($(this));
+	});
 
-}
-
-// Keyboard events
-$(document).keydown(function(e) {
-	switch(e.which) {
-		case 37: // left
+	$('#shortcutsLinks #prev').click(function() {
 		moveToSelected('prev');
-		break;
+	});
 
-		case 39: // right
+	$('#shortcutsLinks #next').click(function() {
 		moveToSelected('next');
-		break;
+	});
 
-		default: return;
-	}
-	e.preventDefault();
+
+
+
+	// ------------------------------------------------
+	// Solutions By industry
+	// ------------------------------------------------
+
+	//$("#industryTab ul").idTabs(); 
+
+	$("#industryTab ul").idTabs(function(id,list,set){ 
+		$("a",set).removeClass("selected") 
+		.filter("[href='"+id+"']",set).addClass("selected"); 
+
+		for(i in list) 
+			$(list[i]).hide().removeClass("active"); 
+		$(id).fadeIn().addClass("active"); 
+
+		return false; 
+	}); 
+
+
 });
-
-
-$('#shortcutsLinks > main > div').click(function() {
-	moveToSelected($(this));
-});
-
-$('#shortcutsLinks #prev').click(function() {
-	moveToSelected('prev');
-});
-
-$('#shortcutsLinks #next').click(function() {
-	moveToSelected('next');
-});
-
-
-
-
-
-
-
-
 
 
 
