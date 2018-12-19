@@ -40,8 +40,6 @@ $(document).ready(function() {
 		$("body > section").waypoint(function() {
 			$(this).toggleClass("active");
 		}, { offset: 800 });
-
-		$('#nav').hide();
 		
 	}
 
@@ -50,9 +48,6 @@ $(document).ready(function() {
 		$("body > section").waypoint(function() {
 			$(this).toggleClass("active");
 		}, { offset: 400 });
-
-
-		$('#nav > li').children('ul').hide();
 
 		$('#nav > li:has(ul)').addClass('submenu').hover(
 			function(){
